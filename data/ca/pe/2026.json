@@ -1,0 +1,39 @@
+{
+  "jurisdictionId": "ca-pe",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Prince Edward Island income tax",
+      "type": "income",
+      "brackets": [
+        { "min": 0, "max": 33928, "rate": 0.095 },
+        { "min": 33928, "max": 65820, "rate": 0.1347 },
+        { "min": 65820, "max": 106890, "rate": 0.166 },
+        { "min": 106890, "max": 142250, "rate": 0.1762 },
+        { "min": 142250, "max": 200000, "rate": 0.19 },
+        { "min": 200000, "max": null, "rate": 0.20 }
+      ],
+      "deductionsCredits": [
+        { "name": "Basic personal amount", "kind": "credit", "amount": 1425 }
+      ],
+      "currency": "CAD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/tax-rates-brackets/current-year.html"
+    },
+    {
+      "name": "HST",
+      "type": "consumption",
+      "flatRate": 0.15,
+      "supersedesParent": "GST",
+      "currency": "CAD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate.html"
+    }
+  ]
+}

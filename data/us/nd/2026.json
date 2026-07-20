@@ -1,0 +1,109 @@
+{
+  "jurisdictionId": "us-nd",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "North Dakota income tax",
+      "type": "income",
+      "brackets": {
+        "single": [
+          {
+            "min": 0,
+            "max": 48475,
+            "rate": 0
+          },
+          {
+            "min": 48475,
+            "max": 244825,
+            "rate": 0.0195
+          },
+          {
+            "min": 244825,
+            "max": null,
+            "rate": 0.025
+          }
+        ],
+        "marriedFilingJointly": [
+          {
+            "min": 0,
+            "max": 80975,
+            "rate": 0
+          },
+          {
+            "min": 80975,
+            "max": 298075,
+            "rate": 0.0195
+          },
+          {
+            "min": 298075,
+            "max": null,
+            "rate": 0.025
+          }
+        ],
+        "headOfHousehold": [
+          {
+            "min": 0,
+            "max": 48475,
+            "rate": 0
+          },
+          {
+            "min": 48475,
+            "max": 244825,
+            "rate": 0.0195
+          },
+          {
+            "min": 244825,
+            "max": null,
+            "rate": 0.025
+          }
+        ],
+        "marriedFilingSeparately": [
+          {
+            "min": 0,
+            "max": 48475,
+            "rate": 0
+          },
+          {
+            "min": 48475,
+            "max": 244825,
+            "rate": 0.0195
+          },
+          {
+            "min": 244825,
+            "max": null,
+            "rate": 0.025
+          }
+        ]
+      },
+      "deductionsCredits": [
+        {
+          "name": "Standard deduction",
+          "kind": "deduction",
+          "amount": {
+            "single": 16100.0,
+            "marriedFilingJointly": 32200.0,
+            "headOfHousehold": 16100.0,
+            "marriedFilingSeparately": 16100.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "North Dakota sales tax",
+      "type": "consumption",
+      "flatRate": 0.05,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

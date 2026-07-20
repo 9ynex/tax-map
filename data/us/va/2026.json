@@ -1,0 +1,71 @@
+{
+  "jurisdictionId": "us-va",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Virginia income tax",
+      "type": "income",
+      "brackets": [
+        {
+          "min": 0,
+          "max": 3000,
+          "rate": 0.02
+        },
+        {
+          "min": 3000,
+          "max": 5000,
+          "rate": 0.03
+        },
+        {
+          "min": 5000,
+          "max": 17000,
+          "rate": 0.05
+        },
+        {
+          "min": 17000,
+          "max": null,
+          "rate": 0.0575
+        }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "Standard deduction",
+          "kind": "deduction",
+          "amount": {
+            "single": 8750.0,
+            "marriedFilingJointly": 17500.0,
+            "headOfHousehold": 8750.0,
+            "marriedFilingSeparately": 8750.0
+          }
+        },
+        {
+          "name": "Personal exemption",
+          "kind": "deduction",
+          "amount": {
+            "single": 930.0,
+            "marriedFilingJointly": 1860.0,
+            "headOfHousehold": 930.0,
+            "marriedFilingSeparately": 930.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "Virginia sales tax",
+      "type": "consumption",
+      "flatRate": 0.053,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

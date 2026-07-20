@@ -1,0 +1,119 @@
+{
+  "jurisdictionId": "us-al",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Alabama income tax",
+      "type": "income",
+      "brackets": {
+        "single": [
+          {
+            "min": 0,
+            "max": 500,
+            "rate": 0.02
+          },
+          {
+            "min": 500,
+            "max": 3000,
+            "rate": 0.04
+          },
+          {
+            "min": 3000,
+            "max": null,
+            "rate": 0.05
+          }
+        ],
+        "marriedFilingJointly": [
+          {
+            "min": 0,
+            "max": 1000,
+            "rate": 0.02
+          },
+          {
+            "min": 1000,
+            "max": 6000,
+            "rate": 0.04
+          },
+          {
+            "min": 6000,
+            "max": null,
+            "rate": 0.05
+          }
+        ],
+        "headOfHousehold": [
+          {
+            "min": 0,
+            "max": 500,
+            "rate": 0.02
+          },
+          {
+            "min": 500,
+            "max": 3000,
+            "rate": 0.04
+          },
+          {
+            "min": 3000,
+            "max": null,
+            "rate": 0.05
+          }
+        ],
+        "marriedFilingSeparately": [
+          {
+            "min": 0,
+            "max": 500,
+            "rate": 0.02
+          },
+          {
+            "min": 500,
+            "max": 3000,
+            "rate": 0.04
+          },
+          {
+            "min": 3000,
+            "max": null,
+            "rate": 0.05
+          }
+        ]
+      },
+      "deductionsCredits": [
+        {
+          "name": "Standard deduction",
+          "kind": "deduction",
+          "amount": {
+            "single": 3000.0,
+            "marriedFilingJointly": 8500.0,
+            "headOfHousehold": 3000.0,
+            "marriedFilingSeparately": 3000.0
+          }
+        },
+        {
+          "name": "Personal exemption",
+          "kind": "deduction",
+          "amount": {
+            "single": 1500.0,
+            "marriedFilingJointly": 3000.0,
+            "headOfHousehold": 1500.0,
+            "marriedFilingSeparately": 1500.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "Alabama sales tax",
+      "type": "consumption",
+      "flatRate": 0.04,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

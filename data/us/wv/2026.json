@@ -1,0 +1,66 @@
+{
+  "jurisdictionId": "us-wv",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "West Virginia income tax",
+      "type": "income",
+      "brackets": [
+        {
+          "min": 0,
+          "max": 10000,
+          "rate": 0.0222
+        },
+        {
+          "min": 10000,
+          "max": 25000,
+          "rate": 0.0296
+        },
+        {
+          "min": 25000,
+          "max": 40000,
+          "rate": 0.0333
+        },
+        {
+          "min": 40000,
+          "max": 60000,
+          "rate": 0.0444
+        },
+        {
+          "min": 60000,
+          "max": null,
+          "rate": 0.0482
+        }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "Personal exemption",
+          "kind": "deduction",
+          "amount": {
+            "single": 2000.0,
+            "marriedFilingJointly": 4000.0,
+            "headOfHousehold": 2000.0,
+            "marriedFilingSeparately": 2000.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "West Virginia sales tax",
+      "type": "consumption",
+      "flatRate": 0.06,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

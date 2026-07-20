@@ -1,0 +1,37 @@
+{
+  "jurisdictionId": "ca-nb",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "New Brunswick income tax",
+      "type": "income",
+      "brackets": [
+        { "min": 0, "max": 52333, "rate": 0.094 },
+        { "min": 52333, "max": 104666, "rate": 0.14 },
+        { "min": 104666, "max": 193861, "rate": 0.16 },
+        { "min": 193861, "max": null, "rate": 0.195 }
+      ],
+      "deductionsCredits": [
+        { "name": "Basic personal amount", "kind": "credit", "amount": 1284.416 }
+      ],
+      "currency": "CAD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/tax-rates-brackets/current-year.html"
+    },
+    {
+      "name": "HST",
+      "type": "consumption",
+      "flatRate": 0.15,
+      "supersedesParent": "GST",
+      "currency": "CAD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate.html"
+    }
+  ]
+}

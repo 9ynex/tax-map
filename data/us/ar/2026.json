@@ -1,0 +1,61 @@
+{
+  "jurisdictionId": "us-ar",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Arkansas income tax",
+      "type": "income",
+      "brackets": [
+        {
+          "min": 0,
+          "max": 4600,
+          "rate": 0.02
+        },
+        {
+          "min": 4600,
+          "max": null,
+          "rate": 0.039
+        }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "Standard deduction",
+          "kind": "deduction",
+          "amount": {
+            "single": 2470.0,
+            "marriedFilingJointly": 4940.0,
+            "headOfHousehold": 2470.0,
+            "marriedFilingSeparately": 2470.0
+          }
+        },
+        {
+          "name": "Personal exemption",
+          "kind": "credit",
+          "amount": {
+            "single": 29.0,
+            "marriedFilingJointly": 58.0,
+            "headOfHousehold": 29.0,
+            "marriedFilingSeparately": 29.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "Arkansas sales tax",
+      "type": "consumption",
+      "flatRate": 0.065,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

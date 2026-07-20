@@ -1,0 +1,35 @@
+{
+  "jurisdictionId": "ca-sk",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Saskatchewan income tax",
+      "type": "income",
+      "brackets": [
+        { "min": 0, "max": 54532, "rate": 0.105 },
+        { "min": 54532, "max": 155805, "rate": 0.125 },
+        { "min": 155805, "max": null, "rate": 0.145 }
+      ],
+      "deductionsCredits": [
+        { "name": "Basic personal amount", "kind": "credit", "amount": 2140.005 }
+      ],
+      "currency": "CAD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/tax-rates-brackets/current-year.html"
+    },
+    {
+      "name": "PST",
+      "type": "consumption",
+      "flatRate": 0.06,
+      "currency": "CAD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate.html"
+    }
+  ]
+}

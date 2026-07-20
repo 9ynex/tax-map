@@ -1,0 +1,128 @@
+{
+  "jurisdictionId": "us-or",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Oregon income tax",
+      "type": "income",
+      "brackets": {
+        "single": [
+          {
+            "min": 0,
+            "max": 4550,
+            "rate": 0.0475
+          },
+          {
+            "min": 4550,
+            "max": 11400,
+            "rate": 0.0675
+          },
+          {
+            "min": 11400,
+            "max": 125000,
+            "rate": 0.0875
+          },
+          {
+            "min": 125000,
+            "max": null,
+            "rate": 0.099
+          }
+        ],
+        "marriedFilingJointly": [
+          {
+            "min": 0,
+            "max": 9100,
+            "rate": 0.0475
+          },
+          {
+            "min": 9100,
+            "max": 22800,
+            "rate": 0.0675
+          },
+          {
+            "min": 22800,
+            "max": 250000,
+            "rate": 0.0875
+          },
+          {
+            "min": 250000,
+            "max": null,
+            "rate": 0.099
+          }
+        ],
+        "headOfHousehold": [
+          {
+            "min": 0,
+            "max": 4550,
+            "rate": 0.0475
+          },
+          {
+            "min": 4550,
+            "max": 11400,
+            "rate": 0.0675
+          },
+          {
+            "min": 11400,
+            "max": 125000,
+            "rate": 0.0875
+          },
+          {
+            "min": 125000,
+            "max": null,
+            "rate": 0.099
+          }
+        ],
+        "marriedFilingSeparately": [
+          {
+            "min": 0,
+            "max": 4550,
+            "rate": 0.0475
+          },
+          {
+            "min": 4550,
+            "max": 11400,
+            "rate": 0.0675
+          },
+          {
+            "min": 11400,
+            "max": 125000,
+            "rate": 0.0875
+          },
+          {
+            "min": 125000,
+            "max": null,
+            "rate": 0.099
+          }
+        ]
+      },
+      "deductionsCredits": [
+        {
+          "name": "Standard deduction",
+          "kind": "deduction",
+          "amount": {
+            "single": 2910.0,
+            "marriedFilingJointly": 5820.0,
+            "headOfHousehold": 2910.0,
+            "marriedFilingSeparately": 2910.0
+          }
+        },
+        {
+          "name": "Personal exemption",
+          "kind": "credit",
+          "amount": {
+            "single": 256.0,
+            "marriedFilingJointly": 512.0,
+            "headOfHousehold": 256.0,
+            "marriedFilingSeparately": 256.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    }
+  ]
+}

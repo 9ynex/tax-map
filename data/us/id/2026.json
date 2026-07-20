@@ -1,0 +1,89 @@
+{
+  "jurisdictionId": "us-id",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Idaho income tax",
+      "type": "income",
+      "brackets": {
+        "single": [
+          {
+            "min": 0,
+            "max": 4811,
+            "rate": 0
+          },
+          {
+            "min": 4811,
+            "max": null,
+            "rate": 0.053
+          }
+        ],
+        "marriedFilingJointly": [
+          {
+            "min": 0,
+            "max": 9622,
+            "rate": 0
+          },
+          {
+            "min": 9622,
+            "max": null,
+            "rate": 0.053
+          }
+        ],
+        "headOfHousehold": [
+          {
+            "min": 0,
+            "max": 4811,
+            "rate": 0
+          },
+          {
+            "min": 4811,
+            "max": null,
+            "rate": 0.053
+          }
+        ],
+        "marriedFilingSeparately": [
+          {
+            "min": 0,
+            "max": 4811,
+            "rate": 0
+          },
+          {
+            "min": 4811,
+            "max": null,
+            "rate": 0.053
+          }
+        ]
+      },
+      "deductionsCredits": [
+        {
+          "name": "Standard deduction",
+          "kind": "deduction",
+          "amount": {
+            "single": 16100.0,
+            "marriedFilingJointly": 32200.0,
+            "headOfHousehold": 16100.0,
+            "marriedFilingSeparately": 16100.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "Idaho sales tax",
+      "type": "consumption",
+      "flatRate": 0.06,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

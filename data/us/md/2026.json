@@ -1,0 +1,259 @@
+{
+  "jurisdictionId": "us-md",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Maryland income tax",
+      "type": "income",
+      "brackets": {
+        "single": [
+          {
+            "min": 0,
+            "max": 1000,
+            "rate": 0.02
+          },
+          {
+            "min": 1000,
+            "max": 2000,
+            "rate": 0.03
+          },
+          {
+            "min": 2000,
+            "max": 3000,
+            "rate": 0.04
+          },
+          {
+            "min": 3000,
+            "max": 100000,
+            "rate": 0.0475
+          },
+          {
+            "min": 100000,
+            "max": 125000,
+            "rate": 0.05
+          },
+          {
+            "min": 125000,
+            "max": 150000,
+            "rate": 0.0525
+          },
+          {
+            "min": 150000,
+            "max": 250000,
+            "rate": 0.055
+          },
+          {
+            "min": 250000,
+            "max": 500000,
+            "rate": 0.0575
+          },
+          {
+            "min": 500000,
+            "max": 1000000,
+            "rate": 0.0625
+          },
+          {
+            "min": 1000000,
+            "max": null,
+            "rate": 0.065
+          }
+        ],
+        "marriedFilingJointly": [
+          {
+            "min": 0,
+            "max": 1000,
+            "rate": 0.02
+          },
+          {
+            "min": 1000,
+            "max": 2000,
+            "rate": 0.03
+          },
+          {
+            "min": 2000,
+            "max": 3000,
+            "rate": 0.04
+          },
+          {
+            "min": 3000,
+            "max": 150000,
+            "rate": 0.0475
+          },
+          {
+            "min": 150000,
+            "max": 175000,
+            "rate": 0.05
+          },
+          {
+            "min": 175000,
+            "max": 225000,
+            "rate": 0.0525
+          },
+          {
+            "min": 225000,
+            "max": 300000,
+            "rate": 0.055
+          },
+          {
+            "min": 300000,
+            "max": 600000,
+            "rate": 0.0575
+          },
+          {
+            "min": 600000,
+            "max": 1200000,
+            "rate": 0.0625
+          },
+          {
+            "min": 1200000,
+            "max": null,
+            "rate": 0.065
+          }
+        ],
+        "headOfHousehold": [
+          {
+            "min": 0,
+            "max": 1000,
+            "rate": 0.02
+          },
+          {
+            "min": 1000,
+            "max": 2000,
+            "rate": 0.03
+          },
+          {
+            "min": 2000,
+            "max": 3000,
+            "rate": 0.04
+          },
+          {
+            "min": 3000,
+            "max": 100000,
+            "rate": 0.0475
+          },
+          {
+            "min": 100000,
+            "max": 125000,
+            "rate": 0.05
+          },
+          {
+            "min": 125000,
+            "max": 150000,
+            "rate": 0.0525
+          },
+          {
+            "min": 150000,
+            "max": 250000,
+            "rate": 0.055
+          },
+          {
+            "min": 250000,
+            "max": 500000,
+            "rate": 0.0575
+          },
+          {
+            "min": 500000,
+            "max": 1000000,
+            "rate": 0.0625
+          },
+          {
+            "min": 1000000,
+            "max": null,
+            "rate": 0.065
+          }
+        ],
+        "marriedFilingSeparately": [
+          {
+            "min": 0,
+            "max": 1000,
+            "rate": 0.02
+          },
+          {
+            "min": 1000,
+            "max": 2000,
+            "rate": 0.03
+          },
+          {
+            "min": 2000,
+            "max": 3000,
+            "rate": 0.04
+          },
+          {
+            "min": 3000,
+            "max": 100000,
+            "rate": 0.0475
+          },
+          {
+            "min": 100000,
+            "max": 125000,
+            "rate": 0.05
+          },
+          {
+            "min": 125000,
+            "max": 150000,
+            "rate": 0.0525
+          },
+          {
+            "min": 150000,
+            "max": 250000,
+            "rate": 0.055
+          },
+          {
+            "min": 250000,
+            "max": 500000,
+            "rate": 0.0575
+          },
+          {
+            "min": 500000,
+            "max": 1000000,
+            "rate": 0.0625
+          },
+          {
+            "min": 1000000,
+            "max": null,
+            "rate": 0.065
+          }
+        ]
+      },
+      "deductionsCredits": [
+        {
+          "name": "Standard deduction",
+          "kind": "deduction",
+          "amount": {
+            "single": 3350.0,
+            "marriedFilingJointly": 6700.0,
+            "headOfHousehold": 3350.0,
+            "marriedFilingSeparately": 3350.0
+          }
+        },
+        {
+          "name": "Personal exemption",
+          "kind": "deduction",
+          "amount": {
+            "single": 3200.0,
+            "marriedFilingJointly": 6400.0,
+            "headOfHousehold": 3200.0,
+            "marriedFilingSeparately": 3200.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "Maryland sales tax",
+      "type": "consumption",
+      "flatRate": 0.06,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

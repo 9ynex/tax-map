@@ -120,10 +120,17 @@ network round-trip, which is what makes region comparisons feel responsive inste
 
 `currency` lives on every `TaxComponent`, but converting between currencies for a live
 comparison (e.g. USD vs. CAD) would reintroduce exactly the kind of external, fluctuating
-data dependency this strategy is built to avoid. **v1 restricts side-by-side comparison to
-jurisdictions sharing a currency** (i.e. compare within the US or within Canada, not
-cross-country). Cross-country FX-aware comparison is deferred until there's a defined
-strategy for sourcing and caching exchange rates.
+data dependency this strategy is built to avoid, so v1 still does **no FX conversion,
+anywhere**. What changed: comparison is no longer *restricted* to same-currency pairs —
+the compare picker (components/compare-picker.tsx) lets a user pick any two regions across
+any enabled country, including a US state against a Canadian province. What makes this safe
+without conversion is that **effective tax rate is currency-agnostic** (a percentage, not a
+dollar amount) — comparing 25% to 20% is meaningful regardless of currency, so
+`app/compare/[a]/[b]/page.tsx` and `CompareView` lead with the rate difference. Dollar
+figures (total tax, take-home) are still shown per side, but explicitly labeled with each
+region's own currency code and never combined, summed, or implied to be equivalent — no
+silent CAD-vs-USD false-equivalence. True FX-aware dollar conversion is still deferred until
+there's a defined strategy for sourcing and caching exchange rates.
 
 ## Caching
 

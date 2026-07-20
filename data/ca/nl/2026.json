@@ -1,0 +1,41 @@
+{
+  "jurisdictionId": "ca-nl",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Newfoundland and Labrador income tax",
+      "type": "income",
+      "brackets": [
+        { "min": 0, "max": 44678, "rate": 0.087 },
+        { "min": 44678, "max": 89354, "rate": 0.145 },
+        { "min": 89354, "max": 159528, "rate": 0.158 },
+        { "min": 159528, "max": 223340, "rate": 0.178 },
+        { "min": 223340, "max": 285319, "rate": 0.198 },
+        { "min": 285319, "max": 570638, "rate": 0.208 },
+        { "min": 570638, "max": 1141275, "rate": 0.213 },
+        { "min": 1141275, "max": null, "rate": 0.218 }
+      ],
+      "deductionsCredits": [
+        { "name": "Basic personal amount", "kind": "credit", "amount": 973.356 }
+      ],
+      "currency": "CAD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/tax-rates-brackets/current-year.html"
+    },
+    {
+      "name": "HST",
+      "type": "consumption",
+      "flatRate": 0.15,
+      "supersedesParent": "GST",
+      "currency": "CAD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate.html"
+    }
+  ]
+}

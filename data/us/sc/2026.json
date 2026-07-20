@@ -1,0 +1,56 @@
+{
+  "jurisdictionId": "us-sc",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "South Carolina income tax",
+      "type": "income",
+      "brackets": [
+        {
+          "min": 0,
+          "max": 3640,
+          "rate": 0
+        },
+        {
+          "min": 3640,
+          "max": 18230,
+          "rate": 0.03
+        },
+        {
+          "min": 18230,
+          "max": null,
+          "rate": 0.06
+        }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "Standard deduction",
+          "kind": "deduction",
+          "amount": {
+            "single": 8350.0,
+            "marriedFilingJointly": 16700.0,
+            "headOfHousehold": 8350.0,
+            "marriedFilingSeparately": 8350.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "South Carolina sales tax",
+      "type": "consumption",
+      "flatRate": 0.06,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

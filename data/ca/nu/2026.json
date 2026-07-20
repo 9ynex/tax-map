@@ -1,0 +1,25 @@
+{
+  "jurisdictionId": "ca-nu",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Nunavut income tax",
+      "type": "income",
+      "brackets": [
+        { "min": 0, "max": 55801, "rate": 0.04 },
+        { "min": 55801, "max": 111602, "rate": 0.07 },
+        { "min": 111602, "max": 181439, "rate": 0.09 },
+        { "min": 181439, "max": null, "rate": 0.115 }
+      ],
+      "deductionsCredits": [
+        { "name": "Basic personal amount", "kind": "credit", "amount": 786.36 }
+      ],
+      "currency": "CAD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/tax-rates-brackets/current-year.html"
+    }
+  ]
+}

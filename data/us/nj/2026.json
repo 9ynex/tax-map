@@ -1,0 +1,189 @@
+{
+  "jurisdictionId": "us-nj",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "New Jersey income tax",
+      "type": "income",
+      "brackets": {
+        "single": [
+          {
+            "min": 0,
+            "max": 20000,
+            "rate": 0.014
+          },
+          {
+            "min": 20000,
+            "max": 35000,
+            "rate": 0.0175
+          },
+          {
+            "min": 35000,
+            "max": 40000,
+            "rate": 0.035
+          },
+          {
+            "min": 40000,
+            "max": 75000,
+            "rate": 0.05525
+          },
+          {
+            "min": 75000,
+            "max": 500000,
+            "rate": 0.0637
+          },
+          {
+            "min": 500000,
+            "max": 1000000,
+            "rate": 0.0897
+          },
+          {
+            "min": 1000000,
+            "max": null,
+            "rate": 0.1075
+          }
+        ],
+        "marriedFilingJointly": [
+          {
+            "min": 0,
+            "max": 20000,
+            "rate": 0.014
+          },
+          {
+            "min": 20000,
+            "max": 50000,
+            "rate": 0.0175
+          },
+          {
+            "min": 50000,
+            "max": 70000,
+            "rate": 0.0245
+          },
+          {
+            "min": 70000,
+            "max": 80000,
+            "rate": 0.035
+          },
+          {
+            "min": 80000,
+            "max": 150000,
+            "rate": 0.05525
+          },
+          {
+            "min": 150000,
+            "max": 500000,
+            "rate": 0.0637
+          },
+          {
+            "min": 500000,
+            "max": null,
+            "rate": 0.0897
+          }
+        ],
+        "headOfHousehold": [
+          {
+            "min": 0,
+            "max": 20000,
+            "rate": 0.014
+          },
+          {
+            "min": 20000,
+            "max": 35000,
+            "rate": 0.0175
+          },
+          {
+            "min": 35000,
+            "max": 40000,
+            "rate": 0.035
+          },
+          {
+            "min": 40000,
+            "max": 75000,
+            "rate": 0.05525
+          },
+          {
+            "min": 75000,
+            "max": 500000,
+            "rate": 0.0637
+          },
+          {
+            "min": 500000,
+            "max": 1000000,
+            "rate": 0.0897
+          },
+          {
+            "min": 1000000,
+            "max": null,
+            "rate": 0.1075
+          }
+        ],
+        "marriedFilingSeparately": [
+          {
+            "min": 0,
+            "max": 20000,
+            "rate": 0.014
+          },
+          {
+            "min": 20000,
+            "max": 35000,
+            "rate": 0.0175
+          },
+          {
+            "min": 35000,
+            "max": 40000,
+            "rate": 0.035
+          },
+          {
+            "min": 40000,
+            "max": 75000,
+            "rate": 0.05525
+          },
+          {
+            "min": 75000,
+            "max": 500000,
+            "rate": 0.0637
+          },
+          {
+            "min": 500000,
+            "max": 1000000,
+            "rate": 0.0897
+          },
+          {
+            "min": 1000000,
+            "max": null,
+            "rate": 0.1075
+          }
+        ]
+      },
+      "deductionsCredits": [
+        {
+          "name": "Personal exemption",
+          "kind": "deduction",
+          "amount": {
+            "single": 1000.0,
+            "marriedFilingJointly": 2000.0,
+            "headOfHousehold": 1000.0,
+            "marriedFilingSeparately": 1000.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "New Jersey sales tax",
+      "type": "consumption",
+      "flatRate": 0.06625,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

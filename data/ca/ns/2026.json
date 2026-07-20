@@ -1,0 +1,38 @@
+{
+  "jurisdictionId": "ca-ns",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Nova Scotia income tax",
+      "type": "income",
+      "brackets": [
+        { "min": 0, "max": 30995, "rate": 0.0879 },
+        { "min": 30995, "max": 61991, "rate": 0.1495 },
+        { "min": 61991, "max": 97417, "rate": 0.1667 },
+        { "min": 97417, "max": 157124, "rate": 0.175 },
+        { "min": 157124, "max": null, "rate": 0.21 }
+      ],
+      "deductionsCredits": [
+        { "name": "Basic personal amount", "kind": "credit", "amount": 1048.8228 }
+      ],
+      "currency": "CAD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/tax-rates-brackets/current-year.html"
+    },
+    {
+      "name": "HST",
+      "type": "consumption",
+      "flatRate": 0.14,
+      "supersedesParent": "GST",
+      "currency": "CAD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate.html"
+    }
+  ]
+}

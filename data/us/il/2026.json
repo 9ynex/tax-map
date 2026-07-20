@@ -1,0 +1,46 @@
+{
+  "jurisdictionId": "us-il",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Illinois income tax",
+      "type": "income",
+      "brackets": [
+        {
+          "min": 0,
+          "max": null,
+          "rate": 0.0495
+        }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "Personal exemption",
+          "kind": "deduction",
+          "amount": {
+            "single": 2925.0,
+            "marriedFilingJointly": 5850.0,
+            "headOfHousehold": 2925.0,
+            "marriedFilingSeparately": 2925.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "Illinois sales tax",
+      "type": "consumption",
+      "flatRate": 0.0625,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

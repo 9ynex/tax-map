@@ -1,0 +1,56 @@
+{
+  "jurisdictionId": "ca-on",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Ontario income tax",
+      "type": "income",
+      "brackets": [
+        { "min": 0, "max": 53891, "rate": 0.0505 },
+        { "min": 53891, "max": 107785, "rate": 0.0915 },
+        { "min": 107785, "max": 150000, "rate": 0.1116 },
+        { "min": 150000, "max": 220000, "rate": 0.1216 },
+        { "min": 220000, "max": null, "rate": 0.1316 }
+      ],
+      "deductionsCredits": [
+        { "name": "Basic personal amount", "kind": "credit", "amount": 655.9445 }
+      ],
+      "currency": "CAD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/tax-rates-brackets/current-year.html"
+    },
+    {
+      "name": "Ontario surtax",
+      "type": "income",
+      "surtax": {
+        "targetName": "Ontario income tax",
+        "brackets": [
+          { "min": 0, "max": 5818, "rate": 0 },
+          { "min": 5818, "max": 7446, "rate": 0.2 },
+          { "min": 7446, "max": null, "rate": 0.56 }
+        ]
+      },
+      "currency": "CAD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/tax-rates-brackets/current-year.html"
+    },
+    {
+      "name": "HST",
+      "type": "consumption",
+      "flatRate": 0.13,
+      "supersedesParent": "GST",
+      "currency": "CAD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate.html"
+    }
+  ]
+}

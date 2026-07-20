@@ -1,0 +1,51 @@
+{
+  "jurisdictionId": "us-ma",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Massachusetts income tax",
+      "type": "income",
+      "brackets": [
+        {
+          "min": 0,
+          "max": 1083150,
+          "rate": 0.05
+        },
+        {
+          "min": 1083150,
+          "max": null,
+          "rate": 0.09
+        }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "Personal exemption",
+          "kind": "deduction",
+          "amount": {
+            "single": 4400.0,
+            "marriedFilingJointly": 8800.0,
+            "headOfHousehold": 4400.0,
+            "marriedFilingSeparately": 4400.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "Massachusetts sales tax",
+      "type": "consumption",
+      "flatRate": 0.0625,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

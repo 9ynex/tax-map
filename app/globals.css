@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/*
+ * Dark-mode-first palette (docs/frontend.md #9). :root is the dark palette;
+ * prefers-color-scheme: light swaps to the light tokens. No toggle in v1.
+ */
+:root {
+  --background: #0a0e16;
+  --surface: #12161f;
+  --surface-raised: #1a2029;
+  --border: #232a37;
+  --foreground: #e8ecf4;
+  --muted: #8b93a7;
+  --accent: #2dd4a8;
+  --accent-foreground: #04140f;
+  --warn: #f2b84b;
+  --danger: #f16565;
+  --rate-low: #2dd4a8;
+  --rate-mid: #f2b84b;
+  --rate-high: #f16565;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #f6f7fb;
+    --surface: #ffffff;
+    --surface-raised: #ffffff;
+    --border: #e1e4ec;
+    --foreground: #14161d;
+    --muted: #5b6072;
+    --accent: #0d9a75;
+    --accent-foreground: #f6fffb;
+    --warn: #a56a05;
+    --danger: #c23f3f;
+    --rate-low: #0d9a75;
+    --rate-mid: #a56a05;
+    --rate-high: #c23f3f;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-border: var(--border);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-warn: var(--warn);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}

@@ -1,0 +1,17 @@
+{
+  "jurisdictionId": "us-tx",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Texas sales tax",
+      "type": "consumption",
+      "flatRate": 0.0625,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

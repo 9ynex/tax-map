@@ -1,0 +1,530 @@
+[
+  {
+    "id": "us",
+    "slug": "us",
+    "name": "United States",
+    "level": "country",
+    "parentId": null,
+    "countryCode": "US"
+  },
+  {
+    "id": "ca",
+    "slug": "ca",
+    "name": "Canada",
+    "level": "country",
+    "parentId": null,
+    "countryCode": "CA"
+  },
+  {
+    "id": "ca-on",
+    "slug": "on",
+    "name": "Ontario",
+    "level": "province",
+    "parentId": "ca",
+    "countryCode": "CA"
+  },
+  {
+    "id": "ca-qc",
+    "slug": "qc",
+    "name": "Quebec",
+    "level": "province",
+    "parentId": "ca",
+    "countryCode": "CA"
+  },
+  {
+    "id": "ca-bc",
+    "slug": "bc",
+    "name": "British Columbia",
+    "level": "province",
+    "parentId": "ca",
+    "countryCode": "CA"
+  },
+  {
+    "id": "ca-ab",
+    "slug": "ab",
+    "name": "Alberta",
+    "level": "province",
+    "parentId": "ca",
+    "countryCode": "CA"
+  },
+  {
+    "id": "ca-mb",
+    "slug": "mb",
+    "name": "Manitoba",
+    "level": "province",
+    "parentId": "ca",
+    "countryCode": "CA"
+  },
+  {
+    "id": "ca-sk",
+    "slug": "sk",
+    "name": "Saskatchewan",
+    "level": "province",
+    "parentId": "ca",
+    "countryCode": "CA"
+  },
+  {
+    "id": "ca-ns",
+    "slug": "ns",
+    "name": "Nova Scotia",
+    "level": "province",
+    "parentId": "ca",
+    "countryCode": "CA"
+  },
+  {
+    "id": "ca-nb",
+    "slug": "nb",
+    "name": "New Brunswick",
+    "level": "province",
+    "parentId": "ca",
+    "countryCode": "CA"
+  },
+  {
+    "id": "ca-nl",
+    "slug": "nl",
+    "name": "Newfoundland and Labrador",
+    "level": "province",
+    "parentId": "ca",
+    "countryCode": "CA"
+  },
+  {
+    "id": "ca-pe",
+    "slug": "pe",
+    "name": "Prince Edward Island",
+    "level": "province",
+    "parentId": "ca",
+    "countryCode": "CA"
+  },
+  {
+    "id": "ca-yt",
+    "slug": "yt",
+    "name": "Yukon",
+    "level": "territory",
+    "parentId": "ca",
+    "countryCode": "CA"
+  },
+  {
+    "id": "ca-nt",
+    "slug": "nt",
+    "name": "Northwest Territories",
+    "level": "territory",
+    "parentId": "ca",
+    "countryCode": "CA"
+  },
+  {
+    "id": "ca-nu",
+    "slug": "nu",
+    "name": "Nunavut",
+    "level": "territory",
+    "parentId": "ca",
+    "countryCode": "CA"
+  },
+  {
+    "id": "us-al",
+    "slug": "al",
+    "name": "Alabama",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-ak",
+    "slug": "ak",
+    "name": "Alaska",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-az",
+    "slug": "az",
+    "name": "Arizona",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-ar",
+    "slug": "ar",
+    "name": "Arkansas",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-ca",
+    "slug": "ca",
+    "name": "California",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-co",
+    "slug": "co",
+    "name": "Colorado",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-ct",
+    "slug": "ct",
+    "name": "Connecticut",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-de",
+    "slug": "de",
+    "name": "Delaware",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-fl",
+    "slug": "fl",
+    "name": "Florida",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-ga",
+    "slug": "ga",
+    "name": "Georgia",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-hi",
+    "slug": "hi",
+    "name": "Hawaii",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-id",
+    "slug": "id",
+    "name": "Idaho",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-il",
+    "slug": "il",
+    "name": "Illinois",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-in",
+    "slug": "in",
+    "name": "Indiana",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-ia",
+    "slug": "ia",
+    "name": "Iowa",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-ks",
+    "slug": "ks",
+    "name": "Kansas",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-ky",
+    "slug": "ky",
+    "name": "Kentucky",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-la",
+    "slug": "la",
+    "name": "Louisiana",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-me",
+    "slug": "me",
+    "name": "Maine",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-md",
+    "slug": "md",
+    "name": "Maryland",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-ma",
+    "slug": "ma",
+    "name": "Massachusetts",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-mi",
+    "slug": "mi",
+    "name": "Michigan",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-mn",
+    "slug": "mn",
+    "name": "Minnesota",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-ms",
+    "slug": "ms",
+    "name": "Mississippi",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-mo",
+    "slug": "mo",
+    "name": "Missouri",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-mt",
+    "slug": "mt",
+    "name": "Montana",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-ne",
+    "slug": "ne",
+    "name": "Nebraska",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-nv",
+    "slug": "nv",
+    "name": "Nevada",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-nh",
+    "slug": "nh",
+    "name": "New Hampshire",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-nj",
+    "slug": "nj",
+    "name": "New Jersey",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-nm",
+    "slug": "nm",
+    "name": "New Mexico",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-ny",
+    "slug": "ny",
+    "name": "New York",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-nc",
+    "slug": "nc",
+    "name": "North Carolina",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-nd",
+    "slug": "nd",
+    "name": "North Dakota",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-oh",
+    "slug": "oh",
+    "name": "Ohio",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-ok",
+    "slug": "ok",
+    "name": "Oklahoma",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-or",
+    "slug": "or",
+    "name": "Oregon",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-pa",
+    "slug": "pa",
+    "name": "Pennsylvania",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-ri",
+    "slug": "ri",
+    "name": "Rhode Island",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-sc",
+    "slug": "sc",
+    "name": "South Carolina",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-sd",
+    "slug": "sd",
+    "name": "South Dakota",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-tn",
+    "slug": "tn",
+    "name": "Tennessee",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-tx",
+    "slug": "tx",
+    "name": "Texas",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-ut",
+    "slug": "ut",
+    "name": "Utah",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-vt",
+    "slug": "vt",
+    "name": "Vermont",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-va",
+    "slug": "va",
+    "name": "Virginia",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-wa",
+    "slug": "wa",
+    "name": "Washington",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-wv",
+    "slug": "wv",
+    "name": "West Virginia",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-wi",
+    "slug": "wi",
+    "name": "Wisconsin",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-wy",
+    "slug": "wy",
+    "name": "Wyoming",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  },
+  {
+    "id": "us-dc",
+    "slug": "dc",
+    "name": "District of Columbia",
+    "level": "state",
+    "parentId": "us",
+    "countryCode": "US"
+  }
+]

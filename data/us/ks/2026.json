@@ -1,0 +1,99 @@
+{
+  "jurisdictionId": "us-ks",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Kansas income tax",
+      "type": "income",
+      "brackets": {
+        "single": [
+          {
+            "min": 0,
+            "max": 23000,
+            "rate": 0.052
+          },
+          {
+            "min": 23000,
+            "max": null,
+            "rate": 0.0558
+          }
+        ],
+        "marriedFilingJointly": [
+          {
+            "min": 0,
+            "max": 46000,
+            "rate": 0.052
+          },
+          {
+            "min": 46000,
+            "max": null,
+            "rate": 0.0558
+          }
+        ],
+        "headOfHousehold": [
+          {
+            "min": 0,
+            "max": 23000,
+            "rate": 0.052
+          },
+          {
+            "min": 23000,
+            "max": null,
+            "rate": 0.0558
+          }
+        ],
+        "marriedFilingSeparately": [
+          {
+            "min": 0,
+            "max": 23000,
+            "rate": 0.052
+          },
+          {
+            "min": 23000,
+            "max": null,
+            "rate": 0.0558
+          }
+        ]
+      },
+      "deductionsCredits": [
+        {
+          "name": "Standard deduction",
+          "kind": "deduction",
+          "amount": {
+            "single": 3605.0,
+            "marriedFilingJointly": 8240.0,
+            "headOfHousehold": 3605.0,
+            "marriedFilingSeparately": 3605.0
+          }
+        },
+        {
+          "name": "Personal exemption",
+          "kind": "deduction",
+          "amount": {
+            "single": 9160.0,
+            "marriedFilingJointly": 18320.0,
+            "headOfHousehold": 9160.0,
+            "marriedFilingSeparately": 9160.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "Kansas sales tax",
+      "type": "consumption",
+      "flatRate": 0.065,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

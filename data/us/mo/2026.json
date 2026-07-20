@@ -1,0 +1,81 @@
+{
+  "jurisdictionId": "us-mo",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Missouri income tax",
+      "type": "income",
+      "brackets": [
+        {
+          "min": 0,
+          "max": 1348,
+          "rate": 0
+        },
+        {
+          "min": 1348,
+          "max": 2696,
+          "rate": 0.02
+        },
+        {
+          "min": 2696,
+          "max": 4044,
+          "rate": 0.025
+        },
+        {
+          "min": 4044,
+          "max": 5392,
+          "rate": 0.03
+        },
+        {
+          "min": 5392,
+          "max": 6740,
+          "rate": 0.035
+        },
+        {
+          "min": 6740,
+          "max": 8088,
+          "rate": 0.04
+        },
+        {
+          "min": 8088,
+          "max": 9436,
+          "rate": 0.045
+        },
+        {
+          "min": 9436,
+          "max": null,
+          "rate": 0.047
+        }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "Standard deduction",
+          "kind": "deduction",
+          "amount": {
+            "single": 16100.0,
+            "marriedFilingJointly": 32200.0,
+            "headOfHousehold": 16100.0,
+            "marriedFilingSeparately": 16100.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "Missouri sales tax",
+      "type": "consumption",
+      "flatRate": 0.04225,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

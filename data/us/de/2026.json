@@ -1,0 +1,75 @@
+{
+  "jurisdictionId": "us-de",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Delaware income tax",
+      "type": "income",
+      "brackets": [
+        {
+          "min": 0,
+          "max": 2000,
+          "rate": 0
+        },
+        {
+          "min": 2000,
+          "max": 5000,
+          "rate": 0.022
+        },
+        {
+          "min": 5000,
+          "max": 10000,
+          "rate": 0.039
+        },
+        {
+          "min": 10000,
+          "max": 20000,
+          "rate": 0.048
+        },
+        {
+          "min": 20000,
+          "max": 25000,
+          "rate": 0.052
+        },
+        {
+          "min": 25000,
+          "max": 60000,
+          "rate": 0.0555
+        },
+        {
+          "min": 60000,
+          "max": null,
+          "rate": 0.066
+        }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "Standard deduction",
+          "kind": "deduction",
+          "amount": {
+            "single": 3250.0,
+            "marriedFilingJointly": 6500.0,
+            "headOfHousehold": 3250.0,
+            "marriedFilingSeparately": 3250.0
+          }
+        },
+        {
+          "name": "Personal exemption",
+          "kind": "credit",
+          "amount": {
+            "single": 110.0,
+            "marriedFilingJointly": 220.0,
+            "headOfHousehold": 110.0,
+            "marriedFilingSeparately": 110.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    }
+  ]
+}

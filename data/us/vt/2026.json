@@ -1,0 +1,139 @@
+{
+  "jurisdictionId": "us-vt",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Vermont income tax",
+      "type": "income",
+      "brackets": {
+        "single": [
+          {
+            "min": 0,
+            "max": 49400,
+            "rate": 0.0335
+          },
+          {
+            "min": 49400,
+            "max": 119700,
+            "rate": 0.066
+          },
+          {
+            "min": 119700,
+            "max": 249700,
+            "rate": 0.076
+          },
+          {
+            "min": 249700,
+            "max": null,
+            "rate": 0.0875
+          }
+        ],
+        "marriedFilingJointly": [
+          {
+            "min": 0,
+            "max": 82500,
+            "rate": 0.0335
+          },
+          {
+            "min": 82500,
+            "max": 199450,
+            "rate": 0.066
+          },
+          {
+            "min": 199450,
+            "max": 304000,
+            "rate": 0.076
+          },
+          {
+            "min": 304000,
+            "max": null,
+            "rate": 0.0875
+          }
+        ],
+        "headOfHousehold": [
+          {
+            "min": 0,
+            "max": 49400,
+            "rate": 0.0335
+          },
+          {
+            "min": 49400,
+            "max": 119700,
+            "rate": 0.066
+          },
+          {
+            "min": 119700,
+            "max": 249700,
+            "rate": 0.076
+          },
+          {
+            "min": 249700,
+            "max": null,
+            "rate": 0.0875
+          }
+        ],
+        "marriedFilingSeparately": [
+          {
+            "min": 0,
+            "max": 49400,
+            "rate": 0.0335
+          },
+          {
+            "min": 49400,
+            "max": 119700,
+            "rate": 0.066
+          },
+          {
+            "min": 119700,
+            "max": 249700,
+            "rate": 0.076
+          },
+          {
+            "min": 249700,
+            "max": null,
+            "rate": 0.0875
+          }
+        ]
+      },
+      "deductionsCredits": [
+        {
+          "name": "Standard deduction",
+          "kind": "deduction",
+          "amount": {
+            "single": 7650.0,
+            "marriedFilingJointly": 15300.0,
+            "headOfHousehold": 7650.0,
+            "marriedFilingSeparately": 7650.0
+          }
+        },
+        {
+          "name": "Personal exemption",
+          "kind": "deduction",
+          "amount": {
+            "single": 5300.0,
+            "marriedFilingJointly": 10600.0,
+            "headOfHousehold": 5300.0,
+            "marriedFilingSeparately": 5300.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "Vermont sales tax",
+      "type": "consumption",
+      "flatRate": 0.06,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

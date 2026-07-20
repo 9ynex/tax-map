@@ -1,0 +1,119 @@
+{
+  "jurisdictionId": "us-me",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Maine income tax",
+      "type": "income",
+      "brackets": {
+        "single": [
+          {
+            "min": 0,
+            "max": 27399,
+            "rate": 0.058
+          },
+          {
+            "min": 27399,
+            "max": 64849,
+            "rate": 0.0675
+          },
+          {
+            "min": 64849,
+            "max": null,
+            "rate": 0.0715
+          }
+        ],
+        "marriedFilingJointly": [
+          {
+            "min": 0,
+            "max": 54849,
+            "rate": 0.058
+          },
+          {
+            "min": 54849,
+            "max": 129749,
+            "rate": 0.0675
+          },
+          {
+            "min": 129749,
+            "max": null,
+            "rate": 0.0715
+          }
+        ],
+        "headOfHousehold": [
+          {
+            "min": 0,
+            "max": 27399,
+            "rate": 0.058
+          },
+          {
+            "min": 27399,
+            "max": 64849,
+            "rate": 0.0675
+          },
+          {
+            "min": 64849,
+            "max": null,
+            "rate": 0.0715
+          }
+        ],
+        "marriedFilingSeparately": [
+          {
+            "min": 0,
+            "max": 27399,
+            "rate": 0.058
+          },
+          {
+            "min": 27399,
+            "max": 64849,
+            "rate": 0.0675
+          },
+          {
+            "min": 64849,
+            "max": null,
+            "rate": 0.0715
+          }
+        ]
+      },
+      "deductionsCredits": [
+        {
+          "name": "Standard deduction",
+          "kind": "deduction",
+          "amount": {
+            "single": 8350.0,
+            "marriedFilingJointly": 16700.0,
+            "headOfHousehold": 8350.0,
+            "marriedFilingSeparately": 8350.0
+          }
+        },
+        {
+          "name": "Personal exemption",
+          "kind": "deduction",
+          "amount": {
+            "single": 5300.0,
+            "marriedFilingJointly": 10600.0,
+            "headOfHousehold": 5300.0,
+            "marriedFilingSeparately": 5300.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "Maine sales tax",
+      "type": "consumption",
+      "flatRate": 0.055,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

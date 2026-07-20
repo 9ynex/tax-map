@@ -1,0 +1,139 @@
+{
+  "jurisdictionId": "us-ok",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Oklahoma income tax",
+      "type": "income",
+      "brackets": {
+        "single": [
+          {
+            "min": 0,
+            "max": 3750,
+            "rate": 0
+          },
+          {
+            "min": 3750,
+            "max": 4900,
+            "rate": 0.025
+          },
+          {
+            "min": 4900,
+            "max": 7200,
+            "rate": 0.035
+          },
+          {
+            "min": 7200,
+            "max": null,
+            "rate": 0.045
+          }
+        ],
+        "marriedFilingJointly": [
+          {
+            "min": 0,
+            "max": 7500,
+            "rate": 0
+          },
+          {
+            "min": 7500,
+            "max": 9800,
+            "rate": 0.025
+          },
+          {
+            "min": 9800,
+            "max": 14400,
+            "rate": 0.035
+          },
+          {
+            "min": 14400,
+            "max": null,
+            "rate": 0.045
+          }
+        ],
+        "headOfHousehold": [
+          {
+            "min": 0,
+            "max": 3750,
+            "rate": 0
+          },
+          {
+            "min": 3750,
+            "max": 4900,
+            "rate": 0.025
+          },
+          {
+            "min": 4900,
+            "max": 7200,
+            "rate": 0.035
+          },
+          {
+            "min": 7200,
+            "max": null,
+            "rate": 0.045
+          }
+        ],
+        "marriedFilingSeparately": [
+          {
+            "min": 0,
+            "max": 3750,
+            "rate": 0
+          },
+          {
+            "min": 3750,
+            "max": 4900,
+            "rate": 0.025
+          },
+          {
+            "min": 4900,
+            "max": 7200,
+            "rate": 0.035
+          },
+          {
+            "min": 7200,
+            "max": null,
+            "rate": 0.045
+          }
+        ]
+      },
+      "deductionsCredits": [
+        {
+          "name": "Standard deduction",
+          "kind": "deduction",
+          "amount": {
+            "single": 6350.0,
+            "marriedFilingJointly": 12700.0,
+            "headOfHousehold": 6350.0,
+            "marriedFilingSeparately": 6350.0
+          }
+        },
+        {
+          "name": "Personal exemption",
+          "kind": "deduction",
+          "amount": {
+            "single": 1000.0,
+            "marriedFilingJointly": 2000.0,
+            "headOfHousehold": 1000.0,
+            "marriedFilingSeparately": 1000.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "Oklahoma sales tax",
+      "type": "consumption",
+      "flatRate": 0.045,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "jurisdictionId": "us-nc",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "North Carolina income tax",
+      "type": "income",
+      "brackets": [
+        {
+          "min": 0,
+          "max": null,
+          "rate": 0.0399
+        }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "Standard deduction",
+          "kind": "deduction",
+          "amount": {
+            "single": 12750.0,
+            "marriedFilingJointly": 25500.0,
+            "headOfHousehold": 12750.0,
+            "marriedFilingSeparately": 12750.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "North Carolina sales tax",
+      "type": "consumption",
+      "flatRate": 0.0475,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "jurisdictionId": "us-la",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Louisiana income tax",
+      "type": "income",
+      "brackets": [
+        {
+          "min": 0,
+          "max": null,
+          "rate": 0.03
+        }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "Standard deduction",
+          "kind": "deduction",
+          "amount": {
+            "single": 12875.0,
+            "marriedFilingJointly": 25750.0,
+            "headOfHousehold": 12875.0,
+            "marriedFilingSeparately": 12875.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "Louisiana sales tax",
+      "type": "consumption",
+      "flatRate": 0.05,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

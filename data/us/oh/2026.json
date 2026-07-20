@@ -1,0 +1,51 @@
+{
+  "jurisdictionId": "us-oh",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Ohio income tax",
+      "type": "income",
+      "brackets": [
+        {
+          "min": 0,
+          "max": 26050,
+          "rate": 0
+        },
+        {
+          "min": 26050,
+          "max": null,
+          "rate": 0.0275
+        }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "Personal exemption",
+          "kind": "deduction",
+          "amount": {
+            "single": 2400.0,
+            "marriedFilingJointly": 4800.0,
+            "headOfHousehold": 2400.0,
+            "marriedFilingSeparately": 2400.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "Ohio sales tax",
+      "type": "consumption",
+      "flatRate": 0.0575,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

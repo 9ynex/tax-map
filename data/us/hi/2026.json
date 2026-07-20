@@ -1,0 +1,299 @@
+{
+  "jurisdictionId": "us-hi",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Hawaii income tax",
+      "type": "income",
+      "brackets": {
+        "single": [
+          {
+            "min": 0,
+            "max": 9600,
+            "rate": 0.014
+          },
+          {
+            "min": 9600,
+            "max": 14400,
+            "rate": 0.032
+          },
+          {
+            "min": 14400,
+            "max": 19200,
+            "rate": 0.055
+          },
+          {
+            "min": 19200,
+            "max": 24000,
+            "rate": 0.064
+          },
+          {
+            "min": 24000,
+            "max": 36000,
+            "rate": 0.068
+          },
+          {
+            "min": 36000,
+            "max": 48000,
+            "rate": 0.072
+          },
+          {
+            "min": 48000,
+            "max": 125000,
+            "rate": 0.076
+          },
+          {
+            "min": 125000,
+            "max": 175000,
+            "rate": 0.079
+          },
+          {
+            "min": 175000,
+            "max": 225000,
+            "rate": 0.0825
+          },
+          {
+            "min": 225000,
+            "max": 275000,
+            "rate": 0.09
+          },
+          {
+            "min": 275000,
+            "max": 325000,
+            "rate": 0.1
+          },
+          {
+            "min": 325000,
+            "max": null,
+            "rate": 0.11
+          }
+        ],
+        "marriedFilingJointly": [
+          {
+            "min": 0,
+            "max": 19200,
+            "rate": 0.014
+          },
+          {
+            "min": 19200,
+            "max": 28800,
+            "rate": 0.032
+          },
+          {
+            "min": 28800,
+            "max": 38400,
+            "rate": 0.055
+          },
+          {
+            "min": 38400,
+            "max": 48000,
+            "rate": 0.064
+          },
+          {
+            "min": 48000,
+            "max": 72000,
+            "rate": 0.068
+          },
+          {
+            "min": 72000,
+            "max": 96000,
+            "rate": 0.072
+          },
+          {
+            "min": 96000,
+            "max": 250000,
+            "rate": 0.076
+          },
+          {
+            "min": 250000,
+            "max": 350000,
+            "rate": 0.079
+          },
+          {
+            "min": 350000,
+            "max": 450000,
+            "rate": 0.0825
+          },
+          {
+            "min": 450000,
+            "max": 550000,
+            "rate": 0.09
+          },
+          {
+            "min": 550000,
+            "max": 650000,
+            "rate": 0.1
+          },
+          {
+            "min": 650000,
+            "max": null,
+            "rate": 0.11
+          }
+        ],
+        "headOfHousehold": [
+          {
+            "min": 0,
+            "max": 9600,
+            "rate": 0.014
+          },
+          {
+            "min": 9600,
+            "max": 14400,
+            "rate": 0.032
+          },
+          {
+            "min": 14400,
+            "max": 19200,
+            "rate": 0.055
+          },
+          {
+            "min": 19200,
+            "max": 24000,
+            "rate": 0.064
+          },
+          {
+            "min": 24000,
+            "max": 36000,
+            "rate": 0.068
+          },
+          {
+            "min": 36000,
+            "max": 48000,
+            "rate": 0.072
+          },
+          {
+            "min": 48000,
+            "max": 125000,
+            "rate": 0.076
+          },
+          {
+            "min": 125000,
+            "max": 175000,
+            "rate": 0.079
+          },
+          {
+            "min": 175000,
+            "max": 225000,
+            "rate": 0.0825
+          },
+          {
+            "min": 225000,
+            "max": 275000,
+            "rate": 0.09
+          },
+          {
+            "min": 275000,
+            "max": 325000,
+            "rate": 0.1
+          },
+          {
+            "min": 325000,
+            "max": null,
+            "rate": 0.11
+          }
+        ],
+        "marriedFilingSeparately": [
+          {
+            "min": 0,
+            "max": 9600,
+            "rate": 0.014
+          },
+          {
+            "min": 9600,
+            "max": 14400,
+            "rate": 0.032
+          },
+          {
+            "min": 14400,
+            "max": 19200,
+            "rate": 0.055
+          },
+          {
+            "min": 19200,
+            "max": 24000,
+            "rate": 0.064
+          },
+          {
+            "min": 24000,
+            "max": 36000,
+            "rate": 0.068
+          },
+          {
+            "min": 36000,
+            "max": 48000,
+            "rate": 0.072
+          },
+          {
+            "min": 48000,
+            "max": 125000,
+            "rate": 0.076
+          },
+          {
+            "min": 125000,
+            "max": 175000,
+            "rate": 0.079
+          },
+          {
+            "min": 175000,
+            "max": 225000,
+            "rate": 0.0825
+          },
+          {
+            "min": 225000,
+            "max": 275000,
+            "rate": 0.09
+          },
+          {
+            "min": 275000,
+            "max": 325000,
+            "rate": 0.1
+          },
+          {
+            "min": 325000,
+            "max": null,
+            "rate": 0.11
+          }
+        ]
+      },
+      "deductionsCredits": [
+        {
+          "name": "Standard deduction",
+          "kind": "deduction",
+          "amount": {
+            "single": 4400.0,
+            "marriedFilingJointly": 8800.0,
+            "headOfHousehold": 4400.0,
+            "marriedFilingSeparately": 4400.0
+          }
+        },
+        {
+          "name": "Personal exemption",
+          "kind": "deduction",
+          "amount": {
+            "single": 1144.0,
+            "marriedFilingJointly": 2288.0,
+            "headOfHousehold": 1144.0,
+            "marriedFilingSeparately": 1144.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "Hawaii sales tax",
+      "type": "consumption",
+      "flatRate": 0.04,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

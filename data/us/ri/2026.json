@@ -1,0 +1,66 @@
+{
+  "jurisdictionId": "us-ri",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Rhode Island income tax",
+      "type": "income",
+      "brackets": [
+        {
+          "min": 0,
+          "max": 82050,
+          "rate": 0.0375
+        },
+        {
+          "min": 82050,
+          "max": 186450,
+          "rate": 0.0475
+        },
+        {
+          "min": 186450,
+          "max": null,
+          "rate": 0.0599
+        }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "Standard deduction",
+          "kind": "deduction",
+          "amount": {
+            "single": 11200.0,
+            "marriedFilingJointly": 22400.0,
+            "headOfHousehold": 11200.0,
+            "marriedFilingSeparately": 11200.0
+          }
+        },
+        {
+          "name": "Personal exemption",
+          "kind": "deduction",
+          "amount": {
+            "single": 5250.0,
+            "marriedFilingJointly": 10500.0,
+            "headOfHousehold": 5250.0,
+            "marriedFilingSeparately": 5250.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "Rhode Island sales tax",
+      "type": "consumption",
+      "flatRate": 0.07,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

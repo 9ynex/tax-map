@@ -1,0 +1,90 @@
+{
+  "jurisdictionId": "ca",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Federal income tax",
+      "type": "income",
+      "brackets": [
+        { "min": 0, "max": 58523, "rate": 0.14 },
+        { "min": 58523, "max": 117045, "rate": 0.205 },
+        { "min": 117045, "max": 181440, "rate": 0.26 },
+        { "min": 181440, "max": 258482, "rate": 0.29 },
+        { "min": 258482, "max": null, "rate": 0.33 }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "Basic personal amount (base)",
+          "kind": "credit",
+          "amount": 2076.06
+        },
+        {
+          "name": "Basic personal amount (additional)",
+          "kind": "credit",
+          "amount": 227.22,
+          "phaseOut": { "start": 181440, "end": 258482 }
+        },
+        {
+          "name": "Canada employment amount",
+          "kind": "credit",
+          "amount": 210.14
+        }
+      ],
+      "currency": "CAD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/tax-rates-brackets/current-year.html"
+    },
+    {
+      "name": "CPP",
+      "type": "payroll",
+      "flatRate": 0.0595,
+      "floor": 3500,
+      "cap": 74600,
+      "currency": "CAD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll/payroll-deductions-contributions/canada-pension-plan-cpp/cpp-contribution-rates-maximums-exemptions.html"
+    },
+    {
+      "name": "CPP2",
+      "type": "payroll",
+      "flatRate": 0.04,
+      "floor": 74600,
+      "cap": 85000,
+      "currency": "CAD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll/payroll-deductions-contributions/canada-pension-plan-cpp/cpp-contribution-rates-maximums-exemptions.html"
+    },
+    {
+      "name": "EI",
+      "type": "payroll",
+      "flatRate": 0.0163,
+      "cap": 68900,
+      "currency": "CAD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll/payroll-deductions-contributions/employment-insurance-ei/ei-premium-rates-maximums.html"
+    },
+    {
+      "name": "GST",
+      "type": "consumption",
+      "flatRate": 0.05,
+      "currency": "CAD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate.html"
+    }
+  ]
+}

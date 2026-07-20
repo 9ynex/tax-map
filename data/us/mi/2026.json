@@ -1,0 +1,46 @@
+{
+  "jurisdictionId": "us-mi",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Michigan income tax",
+      "type": "income",
+      "brackets": [
+        {
+          "min": 0,
+          "max": null,
+          "rate": 0.0425
+        }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "Personal exemption",
+          "kind": "deduction",
+          "amount": {
+            "single": 5900.0,
+            "marriedFilingJointly": 11800.0,
+            "headOfHousehold": 5900.0,
+            "marriedFilingSeparately": 5900.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "Michigan sales tax",
+      "type": "consumption",
+      "flatRate": 0.06,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "jurisdictionId": "us-ut",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Utah income tax",
+      "type": "income",
+      "brackets": [
+        {
+          "min": 0,
+          "max": null,
+          "rate": 0.045
+        }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "Standard deduction",
+          "kind": "credit",
+          "amount": {
+            "single": 966.0,
+            "marriedFilingJointly": 1932.0,
+            "headOfHousehold": 966.0,
+            "marriedFilingSeparately": 966.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "Utah sales tax",
+      "type": "consumption",
+      "flatRate": 0.061,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

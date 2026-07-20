@@ -1,0 +1,37 @@
+{
+  "jurisdictionId": "ca-yt",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Yukon income tax",
+      "type": "income",
+      "brackets": [
+        { "min": 0, "max": 58523, "rate": 0.064 },
+        { "min": 58523, "max": 117045, "rate": 0.09 },
+        { "min": 117045, "max": 181440, "rate": 0.109 },
+        { "min": 181440, "max": 258482, "rate": 0.1293 },
+        { "min": 258482, "max": 500000, "rate": 0.128 },
+        { "min": 500000, "max": null, "rate": 0.15 }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "Basic personal amount (base)",
+          "kind": "credit",
+          "amount": 949.056
+        },
+        {
+          "name": "Basic personal amount (additional)",
+          "kind": "credit",
+          "amount": 103.872,
+          "phaseOut": { "start": 181440, "end": 258482 }
+        }
+      ],
+      "currency": "CAD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/tax-rates-brackets/current-year.html"
+    }
+  ]
+}

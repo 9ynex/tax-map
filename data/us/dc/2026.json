@@ -1,0 +1,76 @@
+{
+  "jurisdictionId": "us-dc",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "District of Columbia income tax",
+      "type": "income",
+      "brackets": [
+        {
+          "min": 0,
+          "max": 10000,
+          "rate": 0.04
+        },
+        {
+          "min": 10000,
+          "max": 40000,
+          "rate": 0.06
+        },
+        {
+          "min": 40000,
+          "max": 60000,
+          "rate": 0.065
+        },
+        {
+          "min": 60000,
+          "max": 250000,
+          "rate": 0.085
+        },
+        {
+          "min": 250000,
+          "max": 500000,
+          "rate": 0.0925
+        },
+        {
+          "min": 500000,
+          "max": 1000000,
+          "rate": 0.0975
+        },
+        {
+          "min": 1000000,
+          "max": null,
+          "rate": 0.1075
+        }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "Standard deduction",
+          "kind": "deduction",
+          "amount": {
+            "single": 16100.0,
+            "marriedFilingJointly": 32200.0,
+            "headOfHousehold": 16100.0,
+            "marriedFilingSeparately": 16100.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "District of Columbia sales tax",
+      "type": "consumption",
+      "flatRate": 0.06,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}

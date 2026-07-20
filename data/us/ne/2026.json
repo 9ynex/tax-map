@@ -1,0 +1,119 @@
+{
+  "jurisdictionId": "us-ne",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Nebraska income tax",
+      "type": "income",
+      "brackets": {
+        "single": [
+          {
+            "min": 0,
+            "max": 4130,
+            "rate": 0.0246
+          },
+          {
+            "min": 4130,
+            "max": 24760,
+            "rate": 0.0351
+          },
+          {
+            "min": 24760,
+            "max": null,
+            "rate": 0.0455
+          }
+        ],
+        "marriedFilingJointly": [
+          {
+            "min": 0,
+            "max": 8250,
+            "rate": 0.0246
+          },
+          {
+            "min": 8250,
+            "max": 49530,
+            "rate": 0.0351
+          },
+          {
+            "min": 49530,
+            "max": null,
+            "rate": 0.0455
+          }
+        ],
+        "headOfHousehold": [
+          {
+            "min": 0,
+            "max": 4130,
+            "rate": 0.0246
+          },
+          {
+            "min": 4130,
+            "max": 24760,
+            "rate": 0.0351
+          },
+          {
+            "min": 24760,
+            "max": null,
+            "rate": 0.0455
+          }
+        ],
+        "marriedFilingSeparately": [
+          {
+            "min": 0,
+            "max": 4130,
+            "rate": 0.0246
+          },
+          {
+            "min": 4130,
+            "max": 24760,
+            "rate": 0.0351
+          },
+          {
+            "min": 24760,
+            "max": null,
+            "rate": 0.0455
+          }
+        ]
+      },
+      "deductionsCredits": [
+        {
+          "name": "Standard deduction",
+          "kind": "deduction",
+          "amount": {
+            "single": 8850.0,
+            "marriedFilingJointly": 17700.0,
+            "headOfHousehold": 8850.0,
+            "marriedFilingSeparately": 8850.0
+          }
+        },
+        {
+          "name": "Personal exemption",
+          "kind": "credit",
+          "amount": {
+            "single": 176.0,
+            "marriedFilingJointly": 352.0,
+            "headOfHousehold": 176.0,
+            "marriedFilingSeparately": 176.0
+          }
+        }
+      ],
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+    },
+    {
+      "name": "Nebraska sales tax",
+      "type": "consumption",
+      "flatRate": 0.055,
+      "currency": "USD",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://taxfoundation.org/data/all/state/sales-tax-rates/"
+    }
+  ]
+}
