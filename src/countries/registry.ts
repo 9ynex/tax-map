@@ -1,5 +1,11 @@
 import { ca } from "./ca";
 import { us } from "./us";
+import { mx } from "./mx";
+import { uk } from "./uk";
+import { fr } from "./fr";
+import { jp } from "./jp";
+import { gl } from "./gl";
+import { br } from "./br";
 import type { CountryConfig } from "./types";
 
 /**
@@ -7,7 +13,7 @@ import type { CountryConfig } from "./types";
  * src/countries/types.ts for what makes a country "add a config, not a
  * migration" per docs/data.md's extensibility section.
  */
-const ALL_COUNTRIES: CountryConfig[] = [ca, us];
+const ALL_COUNTRIES: CountryConfig[] = [ca, us, mx, uk, fr, jp, gl, br];
 
 /** Countries actually routable/visible in the UI. */
 export function listEnabledCountries(): CountryConfig[] {
@@ -23,11 +29,4 @@ export function getCountryBySlug(slug: string): CountryConfig | undefined {
 export function getEnabledCountryBySlug(slug: string): CountryConfig | undefined {
   const country = getCountryBySlug(slug);
   return country?.enabled ? country : undefined;
-}
-
-/** The default country for the unparameterized "/" route. */
-export function getDefaultCountry(): CountryConfig {
-  const [first] = listEnabledCountries();
-  if (!first) throw new Error("no enabled countries in the registry");
-  return first;
 }

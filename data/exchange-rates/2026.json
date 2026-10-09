@@ -1,0 +1,16 @@
+{
+  "year": 2026,
+  "basis": "ppp",
+  "rates": {
+    "USD": 1,
+    "CAD": 1.174,
+    "MXN": 10.507,
+    "GBP": 0.665,
+    "EUR": 0.644,
+    "JPY": 93.306,
+    "DKK": 5.881,
+    "BRL": 2.613
+  },
+  "precision": "estimated",
+  "sourceUrl": "https://www.imf.org/external/datamapper/PPPEX@WEO"
+}

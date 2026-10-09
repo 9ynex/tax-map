@@ -5,6 +5,7 @@ import { loadCountrySnapshots } from "@/src/countries/loadCountrySnapshots";
 import type { CountryConfig } from "@/src/countries/types";
 import { MapExplorer } from "@/components/map/map-explorer";
 import { TaxYearBadge } from "@/components/tax-year-badge";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 import { parseIncome, parseMetric, parsePins, parseView, type SearchParams } from "@/lib/url-state";
 
 /**
@@ -34,6 +35,7 @@ export function CountryOverview({
   return (
     <div className="flex flex-col gap-8">
       <div className="flex flex-col gap-2">
+        <Breadcrumbs items={[{ label: "World", href: "/" }, { label: country.name }]} />
         <TaxYearBadge taxYear={country.taxYear} />
         <h1 className="text-2xl font-semibold tracking-tight text-foreground">
           {country.name} income tax by region

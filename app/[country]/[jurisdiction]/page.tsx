@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
 import { Suspense } from "react";
 
 import { getChildren, loadSnapshotChain } from "@/src/data/index";
@@ -11,6 +9,7 @@ import { listAllRegions } from "@/src/countries/listAllRegions";
 import { RegionDetail } from "@/components/breakdown/region-detail";
 import { TaxYearBadge } from "@/components/tax-year-badge";
 import { ComparePicker } from "@/components/compare-picker";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 import { parseIncome } from "@/lib/url-state";
 import { formatCurrency, formatPercent } from "@/lib/format";
 
@@ -99,15 +98,14 @@ export default async function JurisdictionPage({
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <Link
-        href={`/${country.urlSlug}`}
-        className="inline-flex w-fit items-center gap-1.5 text-sm text-muted hover:text-foreground"
-      >
-        <ArrowLeft className="h-4 w-4" />
-        Back to {country.name} map
-      </Link>
-
       <div className="flex flex-col gap-3">
+        <Breadcrumbs
+          items={[
+            { label: "World", href: "/" },
+            { label: country.name, href: `/${country.urlSlug}` },
+            { label: region.name },
+          ]}
+        />
         <TaxYearBadge taxYear={country.taxYear} />
         <div className="flex flex-wrap items-center justify-between gap-3">
           <h1 className="text-2xl font-semibold tracking-tight text-foreground">{region.name}</h1>

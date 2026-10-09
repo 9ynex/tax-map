@@ -6,22 +6,27 @@ import {
   listJurisdictions,
   loadSnapshot,
   loadSnapshotChain,
+  loadExchangeRates,
   resolveBracketSet,
   requiresFilingStatus,
 } from "./index";
 import { _resetRegistryCache } from "./registry";
 import { _resetSnapshotCache } from "./snapshots";
+import { _resetExchangeRateCache } from "./exchangeRates";
 
 beforeEach(() => {
   _resetRegistryCache();
   _resetSnapshotCache();
+  _resetExchangeRateCache();
 });
 
 describe("registry", () => {
   it("lists all seeded jurisdictions", () => {
     const ids = listJurisdictions().map((j) => j.id).sort();
-    // 2 country roots + 13 CA provinces/territories + 51 US states/DC
-    expect(ids).toHaveLength(66);
+    // 8 country roots + 13 CA provinces/territories + 51 US states/DC + 32 MX
+    // entities + 4 UK nations + 18 FR régions + 47 JP prefectures + 5 GL
+    // municipalities + 27 BR states
+    expect(ids).toHaveLength(205);
     expect(ids).toEqual(
       expect.arrayContaining([
         "us",
@@ -33,6 +38,29 @@ describe("registry", () => {
         "ca-qc",
         "ca-bc",
         "ca-ab",
+        "mx",
+        "mx-cdmx",
+        "mx-jal",
+        "uk",
+        "uk-eng",
+        "uk-sct",
+        "uk-wls",
+        "uk-nir",
+        "fr",
+        "fr-idf",
+        "fr-gp",
+        "fr-yt",
+        "jp",
+        "jp-tokyo",
+        "jp-osaka",
+        "jp-okinawa",
+        "gl",
+        "gl-sermersooq",
+        "gl-avannaata",
+        "br",
+        "br-sp",
+        "br-rj",
+        "br-df",
       ]),
     );
   });
@@ -47,7 +75,16 @@ describe("registry", () => {
     expect(getChildren("us").map((j) => j.id)).toEqual(
       expect.arrayContaining(["us-ca", "us-tx", "us-dc"]),
     );
-    expect(getChildren(null).map((j) => j.id).sort()).toEqual(["ca", "us"]);
+    expect(getChildren(null).map((j) => j.id).sort()).toEqual([
+      "br",
+      "ca",
+      "fr",
+      "gl",
+      "jp",
+      "mx",
+      "uk",
+      "us",
+    ]);
   });
 
   it("builds the ancestor chain root-first", () => {
@@ -103,5 +140,24 @@ describe("resolveBracketSet", () => {
     const snapshot = loadSnapshot("us", 2026)!;
     const payroll = snapshot.components.find((c) => c.type === "payroll")!;
     expect(resolveBracketSet(payroll)).toBeUndefined();
+  });
+});
+
+describe("loadExchangeRates", () => {
+  it("loads the 2026 PPP snapshot with a rate for every enabled country's currency", () => {
+    const rates = loadExchangeRates(2026)!;
+    expect(rates.basis).toBe("ppp");
+    expect(rates.rates.USD).toBe(1);
+    for (const currency of ["CAD", "MXN", "GBP", "EUR", "JPY", "DKK", "BRL"]) {
+      expect(rates.rates[currency]).toBeGreaterThan(0);
+    }
+  });
+
+  it("returns null for a year with no snapshot", () => {
+    expect(loadExchangeRates(1999)).toBeNull();
+  });
+
+  it("caches repeated loads (same object identity)", () => {
+    expect(loadExchangeRates(2026)).toBe(loadExchangeRates(2026));
   });
 });

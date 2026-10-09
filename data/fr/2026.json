@@ -1,0 +1,118 @@
+{
+  "jurisdictionId": "fr",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Impôt sur le revenu",
+      "type": "income",
+      "brackets": [
+        { "min": 0, "max": 11600, "rate": 0 },
+        { "min": 11600, "max": 29579, "rate": 0.11 },
+        { "min": 29579, "max": 84577, "rate": 0.30 },
+        { "min": 84577, "max": 181917, "rate": 0.41 },
+        { "min": 181917, "max": null, "rate": 0.45 }
+      ],
+      "currency": "EUR",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.service-public.fr/particuliers/vosdroits/F1419"
+    },
+    {
+      "name": "CSG-CRDS",
+      "type": "payroll",
+      "flatRate": 0.0953025,
+      "currency": "EUR",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.urssaf.fr/accueil/outils-documentation/taux-baremes.html"
+    },
+    {
+      "name": "Assurance vieillesse (plafonnée)",
+      "type": "payroll",
+      "flatRate": 0.069,
+      "cap": 48060,
+      "currency": "EUR",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.urssaf.fr/accueil/outils-documentation/taux-baremes.html"
+    },
+    {
+      "name": "Assurance vieillesse (déplafonnée)",
+      "type": "payroll",
+      "flatRate": 0.004,
+      "currency": "EUR",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.urssaf.fr/accueil/outils-documentation/taux-baremes.html"
+    },
+    {
+      "name": "Agirc-Arrco (Tranche 1)",
+      "type": "payroll",
+      "flatRate": 0.0315,
+      "cap": 48060,
+      "currency": "EUR",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.legisocial.fr/reperes-sociaux/cotisations-agirc-arrco-2026.html"
+    },
+    {
+      "name": "Agirc-Arrco (Tranche 2)",
+      "type": "payroll",
+      "flatRate": 0.0864,
+      "floor": 48060,
+      "cap": 384480,
+      "currency": "EUR",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.legisocial.fr/reperes-sociaux/cotisations-agirc-arrco-2026.html"
+    },
+    {
+      "name": "CEG (Tranche 1)",
+      "type": "payroll",
+      "flatRate": 0.0086,
+      "cap": 48060,
+      "currency": "EUR",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.legisocial.fr/reperes-sociaux/cotisations-agirc-arrco-2026.html"
+    },
+    {
+      "name": "CEG (Tranche 2)",
+      "type": "payroll",
+      "flatRate": 0.0108,
+      "floor": 48060,
+      "cap": 384480,
+      "currency": "EUR",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.legisocial.fr/reperes-sociaux/cotisations-agirc-arrco-2026.html"
+    },
+    {
+      "name": "TVA",
+      "type": "consumption",
+      "flatRate": 0.20,
+      "currency": "EUR",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.douane.gouv.fr/fiche/tva-dans-les-dom"
+    }
+  ]
+}

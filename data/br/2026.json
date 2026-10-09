@@ -1,0 +1,93 @@
+{
+  "jurisdictionId": "br",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "IRPF",
+      "type": "income",
+      "brackets": [
+        { "min": 0, "max": 29145.60, "rate": 0 },
+        { "min": 29145.60, "max": 33919.80, "rate": 0.075 },
+        { "min": 33919.80, "max": 45012.60, "rate": 0.15 },
+        { "min": 45012.60, "max": 55976.16, "rate": 0.225 },
+        { "min": 55976.16, "max": null, "rate": 0.275 }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "Dedução do INSS",
+          "kind": "deduction",
+          "bracketedAmount": [
+            { "min": 0, "max": 19452.00, "rate": 0.075 },
+            { "min": 19452.00, "max": 34834.08, "rate": 0.09 },
+            { "min": 34834.08, "max": 52251.24, "rate": 0.12 },
+            { "min": 52251.24, "max": 101706.60, "rate": 0.14 },
+            { "min": 101706.60, "max": null, "rate": 0 }
+          ]
+        },
+        {
+          "name": "Redução Lei 15.270/25",
+          "kind": "credit",
+          "amount": 4040.06,
+          "phaseOut": { "start": 60000, "end": 84000 }
+        }
+      ],
+      "currency": "BRL",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "estimated",
+      "sourceUrl": "https://www.gov.br/fazenda/pt-br/acesso-a-informacao/FAQAmpliaodaIsenodoImpostodeRendaetributaomnimadasaltasrendas.docx.pdf"
+    },
+    {
+      "name": "INSS (até 1 salário mínimo)",
+      "type": "payroll",
+      "flatRate": 0.075,
+      "cap": 19452.00,
+      "currency": "BRL",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.contabilizei.com.br/contabilidade-online/tabela-inss/"
+    },
+    {
+      "name": "INSS (2ª faixa)",
+      "type": "payroll",
+      "flatRate": 0.09,
+      "floor": 19452.00,
+      "cap": 34834.08,
+      "currency": "BRL",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.contabilizei.com.br/contabilidade-online/tabela-inss/"
+    },
+    {
+      "name": "INSS (3ª faixa)",
+      "type": "payroll",
+      "flatRate": 0.12,
+      "floor": 34834.08,
+      "cap": 52251.24,
+      "currency": "BRL",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.contabilizei.com.br/contabilidade-online/tabela-inss/"
+    },
+    {
+      "name": "INSS (4ª faixa)",
+      "type": "payroll",
+      "flatRate": 0.14,
+      "floor": 52251.24,
+      "cap": 101706.60,
+      "currency": "BRL",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.contabilizei.com.br/contabilidade-online/tabela-inss/"
+    }
+  ]
+}

@@ -1,25 +1,47 @@
 import type { Metadata } from "next";
 
-import { getDefaultCountry } from "@/src/countries/index";
-import { CountryOverview } from "./[country]/country-overview";
+import { loadWorldData } from "@/src/countries/loadWorldData";
+import { loadExchangeRates } from "@/src/data/index";
+import { WorldExplorer } from "@/components/map/world-explorer";
+import { parseIncome } from "@/lib/url-state";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const country = getDefaultCountry();
-  return {
-    // The root URL is normally a site's highest-authority page (docs/seo.md
-    // #1), so it renders the default country's real content directly rather
-    // than an empty landing state — canonical still points at the country's
-    // own permalink to avoid the two URLs reading as duplicate content.
-    alternates: { canonical: `/${country.urlSlug}` },
-  };
-}
+export const metadata: Metadata = {
+  // The root URL is normally a site's highest-authority page (docs/seo.md
+  // #1) — it's real content in its own right now (the world map), not a
+  // stand-in for one particular country, so no canonical redirect to a
+  // country permalink is needed anymore.
+  title: "Compare income tax around the world",
+  description:
+    "An interactive world map of average effective income tax rates by country — drill into any country for a region-by-region breakdown.",
+};
 
 export default async function RootPage({
   searchParams,
 }: {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
-  const country = getDefaultCountry();
+  const countries = loadWorldData();
   const sp = await searchParams;
-  return <CountryOverview country={country} searchParams={sp} />;
+  // The slider is denominated in USD (see WorldExplorer) — averaging every
+  // country's own defaultIncome across currencies (CAD, JPY, DKK, ...)
+  // would blend numbers that aren't comparable into one meaningless figure,
+  // exactly the mistake the PPP conversion below exists to avoid. Anchor to
+  // the US's own default instead, with a flat fallback if it's ever missing.
+  const fallbackIncome = countries.find((c) => c.currency === "USD")?.defaultIncome ?? 65000;
+  const income = parseIncome(sp, fallbackIncome);
+  const exchangeRates = loadExchangeRates(countries[0]?.taxYear ?? new Date().getFullYear());
+
+  return (
+    <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-2">
+        <h1 className="text-2xl font-semibold tracking-tight text-foreground">
+          Income tax around the world
+        </h1>
+        <p className="max-w-2xl text-sm text-muted">
+          Drag the slider, then click a country to drill into its regions.
+        </p>
+      </div>
+      <WorldExplorer countries={countries} initialIncome={income} exchangeRates={exchangeRates} />
+    </div>
+  );
 }

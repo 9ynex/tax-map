@@ -1,10 +1,38 @@
 "use client";
 
 import * as React from "react";
-import { ComposableMap, Geographies, Geography } from "react-simple-maps";
+import { ComposableMap, Geographies, Geography, type ProjectionFunction } from "react-simple-maps";
+import { geoConicConformalFrance } from "d3-composite-projections";
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useUiStore } from "@/store/ui-store";
+
+/**
+ * Composite projections (currently just France's overseas régions inset)
+ * aren't plain d3-geo export names react-simple-maps can resolve by string —
+ * they're fully self-contained GeoProjection objects with their own baked-in
+ * scale/translate/rotate that must be passed through as-is. react-simple-maps
+ * detects this automatically (its internal `makeProjection` short-circuits
+ * to `return projection` whenever `typeof projection === "function"`, a d3
+ * projection always being callable — see node_modules/react-simple-maps's
+ * MapProvider), skipping projectionConfig entirely, which is why `center`/
+ * `scale` are meaningless for these and go unused below.
+ *
+ * The cast below is necessary, not just convenient: @types/react-simple-maps
+ * declares `ProjectionFunction` as `(width, height, config) => GeoProjection`
+ * (a *factory*) to match its own named-string resolution path, but a real d3
+ * GeoProjection object — what `geoConicConformalFrance()` actually returns —
+ * has the unrelated call signature `(point) => [number, number] | null`. Both
+ * are "just functions" at runtime (which is all `isFunc` in MapProvider ever
+ * checks), so the mismatch is only a typing gap in @types/react-simple-maps,
+ * not a real runtime incompatibility.
+ */
+function resolveProjection(name: string): string | ProjectionFunction {
+  if (name === "geoConicConformalFrance") {
+    return geoConicConformalFrance() as unknown as ProjectionFunction;
+  }
+  return name;
+}
 
 export interface MapRegionValue {
   jurisdictionId: string;
@@ -21,14 +49,18 @@ export function TaxMap({
   projection,
   center,
   scale,
+  width = 800,
+  height = 600,
   regions,
   onSelect,
 }: {
   topologyUrl: string;
   objectName: string;
-  projection: "geoMercator" | "geoAlbersUsa";
-  center: [number, number];
-  scale: number;
+  projection: "geoMercator" | "geoAlbersUsa" | "geoConicConformalFrance";
+  center?: [number, number];
+  scale?: number;
+  width?: number;
+  height?: number;
   regions: MapRegionValue[];
   onSelect: (jurisdictionId: string) => void;
 }) {
@@ -41,12 +73,16 @@ export function TaxMap({
     return map;
   }, [regions]);
 
+  const resolvedProjection = React.useMemo(() => resolveProjection(projection), [projection]);
+
   return (
     <TooltipProvider delayDuration={100}>
       <div className="w-full overflow-hidden rounded-2xl border border-border bg-surface">
         <ComposableMap
-          projection={projection}
+          projection={resolvedProjection}
           projectionConfig={{ center, scale }}
+          width={width}
+          height={height}
           className="h-auto w-full"
         >
           <Geographies geography={topologyUrl}>

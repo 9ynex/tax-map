@@ -1,0 +1,17 @@
+{
+  "jurisdictionId": "br-pa",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "ICMS (Pará)",
+      "type": "consumption",
+      "flatRate": 0.19,
+      "currency": "BRL",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.mobills.com.br/tabelas/icms/"
+    }
+  ]
+}

@@ -526,5 +526,1117 @@
     "level": "state",
     "parentId": "us",
     "countryCode": "US"
+  },
+  {
+    "id": "mx",
+    "slug": "mx",
+    "name": "Mexico",
+    "level": "country",
+    "parentId": null,
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-ags",
+    "slug": "ags",
+    "name": "Aguascalientes",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-bc",
+    "slug": "bc",
+    "name": "Baja California",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-bcs",
+    "slug": "bcs",
+    "name": "Baja California Sur",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-camp",
+    "slug": "camp",
+    "name": "Campeche",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-chis",
+    "slug": "chis",
+    "name": "Chiapas",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-chih",
+    "slug": "chih",
+    "name": "Chihuahua",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-cdmx",
+    "slug": "cdmx",
+    "name": "Ciudad de México",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-coah",
+    "slug": "coah",
+    "name": "Coahuila",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-col",
+    "slug": "col",
+    "name": "Colima",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-dgo",
+    "slug": "dgo",
+    "name": "Durango",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-gto",
+    "slug": "gto",
+    "name": "Guanajuato",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-gro",
+    "slug": "gro",
+    "name": "Guerrero",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-hgo",
+    "slug": "hgo",
+    "name": "Hidalgo",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-jal",
+    "slug": "jal",
+    "name": "Jalisco",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-mex",
+    "slug": "mex",
+    "name": "México",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-mich",
+    "slug": "mich",
+    "name": "Michoacán",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-mor",
+    "slug": "mor",
+    "name": "Morelos",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-nay",
+    "slug": "nay",
+    "name": "Nayarit",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-nl",
+    "slug": "nl",
+    "name": "Nuevo León",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-oax",
+    "slug": "oax",
+    "name": "Oaxaca",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-pue",
+    "slug": "pue",
+    "name": "Puebla",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-qro",
+    "slug": "qro",
+    "name": "Querétaro",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-qroo",
+    "slug": "qroo",
+    "name": "Quintana Roo",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-slp",
+    "slug": "slp",
+    "name": "San Luis Potosí",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-sin",
+    "slug": "sin",
+    "name": "Sinaloa",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-son",
+    "slug": "son",
+    "name": "Sonora",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-tab",
+    "slug": "tab",
+    "name": "Tabasco",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-tamps",
+    "slug": "tamps",
+    "name": "Tamaulipas",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-tlax",
+    "slug": "tlax",
+    "name": "Tlaxcala",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-ver",
+    "slug": "ver",
+    "name": "Veracruz",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-yuc",
+    "slug": "yuc",
+    "name": "Yucatán",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "mx-zac",
+    "slug": "zac",
+    "name": "Zacatecas",
+    "level": "state",
+    "parentId": "mx",
+    "countryCode": "MX"
+  },
+  {
+    "id": "uk",
+    "slug": "uk",
+    "name": "United Kingdom",
+    "level": "country",
+    "parentId": null,
+    "countryCode": "GB"
+  },
+  {
+    "id": "uk-eng",
+    "slug": "eng",
+    "name": "England",
+    "level": "state",
+    "parentId": "uk",
+    "countryCode": "GB"
+  },
+  {
+    "id": "uk-sct",
+    "slug": "sct",
+    "name": "Scotland",
+    "level": "state",
+    "parentId": "uk",
+    "countryCode": "GB"
+  },
+  {
+    "id": "uk-wls",
+    "slug": "wls",
+    "name": "Wales",
+    "level": "state",
+    "parentId": "uk",
+    "countryCode": "GB"
+  },
+  {
+    "id": "uk-nir",
+    "slug": "nir",
+    "name": "Northern Ireland",
+    "level": "state",
+    "parentId": "uk",
+    "countryCode": "GB"
+  },
+  {
+    "id": "fr",
+    "slug": "fr",
+    "name": "France",
+    "level": "country",
+    "parentId": null,
+    "countryCode": "FR"
+  },
+  {
+    "id": "fr-ara",
+    "slug": "ara",
+    "name": "Auvergne-Rhône-Alpes",
+    "level": "state",
+    "parentId": "fr",
+    "countryCode": "FR"
+  },
+  {
+    "id": "fr-bfc",
+    "slug": "bfc",
+    "name": "Bourgogne-Franche-Comté",
+    "level": "state",
+    "parentId": "fr",
+    "countryCode": "FR"
+  },
+  {
+    "id": "fr-bre",
+    "slug": "bre",
+    "name": "Bretagne",
+    "level": "state",
+    "parentId": "fr",
+    "countryCode": "FR"
+  },
+  {
+    "id": "fr-cvl",
+    "slug": "cvl",
+    "name": "Centre-Val de Loire",
+    "level": "state",
+    "parentId": "fr",
+    "countryCode": "FR"
+  },
+  {
+    "id": "fr-cor",
+    "slug": "cor",
+    "name": "Corse",
+    "level": "state",
+    "parentId": "fr",
+    "countryCode": "FR"
+  },
+  {
+    "id": "fr-ges",
+    "slug": "ges",
+    "name": "Grand Est",
+    "level": "state",
+    "parentId": "fr",
+    "countryCode": "FR"
+  },
+  {
+    "id": "fr-hdf",
+    "slug": "hdf",
+    "name": "Hauts-de-France",
+    "level": "state",
+    "parentId": "fr",
+    "countryCode": "FR"
+  },
+  {
+    "id": "fr-idf",
+    "slug": "idf",
+    "name": "Île-de-France",
+    "level": "state",
+    "parentId": "fr",
+    "countryCode": "FR"
+  },
+  {
+    "id": "fr-nor",
+    "slug": "nor",
+    "name": "Normandie",
+    "level": "state",
+    "parentId": "fr",
+    "countryCode": "FR"
+  },
+  {
+    "id": "fr-naq",
+    "slug": "naq",
+    "name": "Nouvelle-Aquitaine",
+    "level": "state",
+    "parentId": "fr",
+    "countryCode": "FR"
+  },
+  {
+    "id": "fr-occ",
+    "slug": "occ",
+    "name": "Occitanie",
+    "level": "state",
+    "parentId": "fr",
+    "countryCode": "FR"
+  },
+  {
+    "id": "fr-pdl",
+    "slug": "pdl",
+    "name": "Pays de la Loire",
+    "level": "state",
+    "parentId": "fr",
+    "countryCode": "FR"
+  },
+  {
+    "id": "fr-pac",
+    "slug": "pac",
+    "name": "Provence-Alpes-Côte d'Azur",
+    "level": "state",
+    "parentId": "fr",
+    "countryCode": "FR"
+  },
+  {
+    "id": "fr-gp",
+    "slug": "gp",
+    "name": "Guadeloupe",
+    "level": "state",
+    "parentId": "fr",
+    "countryCode": "FR"
+  },
+  {
+    "id": "fr-mq",
+    "slug": "mq",
+    "name": "Martinique",
+    "level": "state",
+    "parentId": "fr",
+    "countryCode": "FR"
+  },
+  {
+    "id": "fr-gf",
+    "slug": "gf",
+    "name": "Guyane",
+    "level": "state",
+    "parentId": "fr",
+    "countryCode": "FR"
+  },
+  {
+    "id": "fr-re",
+    "slug": "re",
+    "name": "La Réunion",
+    "level": "state",
+    "parentId": "fr",
+    "countryCode": "FR"
+  },
+  {
+    "id": "fr-yt",
+    "slug": "yt",
+    "name": "Mayotte",
+    "level": "state",
+    "parentId": "fr",
+    "countryCode": "FR"
+  },
+  {
+    "id": "jp",
+    "slug": "jp",
+    "name": "Japan",
+    "level": "country",
+    "parentId": null,
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-hokkaido",
+    "slug": "hokkaido",
+    "name": "Hokkaido",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-aomori",
+    "slug": "aomori",
+    "name": "Aomori",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-iwate",
+    "slug": "iwate",
+    "name": "Iwate",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-miyagi",
+    "slug": "miyagi",
+    "name": "Miyagi",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-akita",
+    "slug": "akita",
+    "name": "Akita",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-yamagata",
+    "slug": "yamagata",
+    "name": "Yamagata",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-fukushima",
+    "slug": "fukushima",
+    "name": "Fukushima",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-ibaraki",
+    "slug": "ibaraki",
+    "name": "Ibaraki",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-tochigi",
+    "slug": "tochigi",
+    "name": "Tochigi",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-gunma",
+    "slug": "gunma",
+    "name": "Gunma",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-saitama",
+    "slug": "saitama",
+    "name": "Saitama",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-chiba",
+    "slug": "chiba",
+    "name": "Chiba",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-tokyo",
+    "slug": "tokyo",
+    "name": "Tokyo",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-kanagawa",
+    "slug": "kanagawa",
+    "name": "Kanagawa",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-niigata",
+    "slug": "niigata",
+    "name": "Niigata",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-toyama",
+    "slug": "toyama",
+    "name": "Toyama",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-ishikawa",
+    "slug": "ishikawa",
+    "name": "Ishikawa",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-fukui",
+    "slug": "fukui",
+    "name": "Fukui",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-yamanashi",
+    "slug": "yamanashi",
+    "name": "Yamanashi",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-nagano",
+    "slug": "nagano",
+    "name": "Nagano",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-gifu",
+    "slug": "gifu",
+    "name": "Gifu",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-shizuoka",
+    "slug": "shizuoka",
+    "name": "Shizuoka",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-aichi",
+    "slug": "aichi",
+    "name": "Aichi",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-mie",
+    "slug": "mie",
+    "name": "Mie",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-shiga",
+    "slug": "shiga",
+    "name": "Shiga",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-kyoto",
+    "slug": "kyoto",
+    "name": "Kyoto",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-osaka",
+    "slug": "osaka",
+    "name": "Osaka",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-hyogo",
+    "slug": "hyogo",
+    "name": "Hyogo",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-nara",
+    "slug": "nara",
+    "name": "Nara",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-wakayama",
+    "slug": "wakayama",
+    "name": "Wakayama",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-tottori",
+    "slug": "tottori",
+    "name": "Tottori",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-shimane",
+    "slug": "shimane",
+    "name": "Shimane",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-okayama",
+    "slug": "okayama",
+    "name": "Okayama",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-hiroshima",
+    "slug": "hiroshima",
+    "name": "Hiroshima",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-yamaguchi",
+    "slug": "yamaguchi",
+    "name": "Yamaguchi",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-tokushima",
+    "slug": "tokushima",
+    "name": "Tokushima",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-kagawa",
+    "slug": "kagawa",
+    "name": "Kagawa",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-ehime",
+    "slug": "ehime",
+    "name": "Ehime",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-kochi",
+    "slug": "kochi",
+    "name": "Kochi",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-fukuoka",
+    "slug": "fukuoka",
+    "name": "Fukuoka",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-saga",
+    "slug": "saga",
+    "name": "Saga",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-nagasaki",
+    "slug": "nagasaki",
+    "name": "Nagasaki",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-kumamoto",
+    "slug": "kumamoto",
+    "name": "Kumamoto",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-oita",
+    "slug": "oita",
+    "name": "Oita",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-miyazaki",
+    "slug": "miyazaki",
+    "name": "Miyazaki",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-kagoshima",
+    "slug": "kagoshima",
+    "name": "Kagoshima",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "jp-okinawa",
+    "slug": "okinawa",
+    "name": "Okinawa",
+    "level": "state",
+    "parentId": "jp",
+    "countryCode": "JP"
+  },
+  {
+    "id": "gl",
+    "slug": "gl",
+    "name": "Greenland",
+    "level": "country",
+    "parentId": null,
+    "countryCode": "GL"
+  },
+  {
+    "id": "gl-sermersooq",
+    "slug": "sermersooq",
+    "name": "Sermersooq",
+    "level": "state",
+    "parentId": "gl",
+    "countryCode": "GL"
+  },
+  {
+    "id": "gl-qeqqata",
+    "slug": "qeqqata",
+    "name": "Qeqqata",
+    "level": "state",
+    "parentId": "gl",
+    "countryCode": "GL"
+  },
+  {
+    "id": "gl-qeqertalik",
+    "slug": "qeqertalik",
+    "name": "Qeqertalik",
+    "level": "state",
+    "parentId": "gl",
+    "countryCode": "GL"
+  },
+  {
+    "id": "gl-avannaata",
+    "slug": "avannaata",
+    "name": "Avannaata",
+    "level": "state",
+    "parentId": "gl",
+    "countryCode": "GL"
+  },
+  {
+    "id": "gl-kujalleq",
+    "slug": "kujalleq",
+    "name": "Kujalleq",
+    "level": "state",
+    "parentId": "gl",
+    "countryCode": "GL"
+  },
+  {
+    "id": "br",
+    "slug": "br",
+    "name": "Brazil",
+    "level": "country",
+    "parentId": null,
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-ac",
+    "slug": "ac",
+    "name": "Acre",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-al",
+    "slug": "al",
+    "name": "Alagoas",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-ap",
+    "slug": "ap",
+    "name": "Amapá",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-am",
+    "slug": "am",
+    "name": "Amazonas",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-ba",
+    "slug": "ba",
+    "name": "Bahia",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-ce",
+    "slug": "ce",
+    "name": "Ceará",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-df",
+    "slug": "df",
+    "name": "Distrito Federal",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-es",
+    "slug": "es",
+    "name": "Espírito Santo",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-go",
+    "slug": "go",
+    "name": "Goiás",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-ma",
+    "slug": "ma",
+    "name": "Maranhão",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-mt",
+    "slug": "mt",
+    "name": "Mato Grosso",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-ms",
+    "slug": "ms",
+    "name": "Mato Grosso do Sul",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-mg",
+    "slug": "mg",
+    "name": "Minas Gerais",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-pa",
+    "slug": "pa",
+    "name": "Pará",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-pb",
+    "slug": "pb",
+    "name": "Paraíba",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-pr",
+    "slug": "pr",
+    "name": "Paraná",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-pe",
+    "slug": "pe",
+    "name": "Pernambuco",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-pi",
+    "slug": "pi",
+    "name": "Piauí",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-rj",
+    "slug": "rj",
+    "name": "Rio de Janeiro",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-rn",
+    "slug": "rn",
+    "name": "Rio Grande do Norte",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-rs",
+    "slug": "rs",
+    "name": "Rio Grande do Sul",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-ro",
+    "slug": "ro",
+    "name": "Rondônia",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-rr",
+    "slug": "rr",
+    "name": "Roraima",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-sc",
+    "slug": "sc",
+    "name": "Santa Catarina",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-sp",
+    "slug": "sp",
+    "name": "São Paulo",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-se",
+    "slug": "se",
+    "name": "Sergipe",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
+  },
+  {
+    "id": "br-to",
+    "slug": "to",
+    "name": "Tocantins",
+    "level": "state",
+    "parentId": "br",
+    "countryCode": "BR"
   }
 ]

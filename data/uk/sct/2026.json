@@ -1,0 +1,33 @@
+{
+  "jurisdictionId": "uk-sct",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Scottish Income Tax",
+      "type": "income",
+      "supersedesParent": "Income Tax",
+      "brackets": [
+        { "min": 0, "max": 3967, "rate": 0.19 },
+        { "min": 3967, "max": 16956, "rate": 0.20 },
+        { "min": 16956, "max": 31092, "rate": 0.21 },
+        { "min": 31092, "max": 62430, "rate": 0.42 },
+        { "min": 62430, "max": 112570, "rate": 0.45 },
+        { "min": 112570, "max": null, "rate": 0.48 }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "Personal Allowance",
+          "kind": "deduction",
+          "amount": 12570,
+          "phaseOut": { "start": 100000, "end": 125140 }
+        }
+      ],
+      "currency": "GBP",
+      "effectiveDate": "2026-04-06",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.gov.scot/publications/scottish-income-tax-rates-and-bands/pages/2026-to-2027/"
+    }
+  ]
+}

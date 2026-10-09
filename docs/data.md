@@ -116,21 +116,29 @@ No I/O, fully testable, fast enough to run client-side. Running it client-side m
 UX: a user dragging an income slider or toggling regions can recompute instantly with zero
 network round-trip, which is what makes region comparisons feel responsive instead of laggy.
 
-## Cross-country comparison scope (v1)
+## Cross-country comparison scope
 
-`currency` lives on every `TaxComponent`, but converting between currencies for a live
-comparison (e.g. USD vs. CAD) would reintroduce exactly the kind of external, fluctuating
-data dependency this strategy is built to avoid, so v1 still does **no FX conversion,
-anywhere**. What changed: comparison is no longer *restricted* to same-currency pairs —
-the compare picker (components/compare-picker.tsx) lets a user pick any two regions across
-any enabled country, including a US state against a Canadian province. What makes this safe
-without conversion is that **effective tax rate is currency-agnostic** (a percentage, not a
-dollar amount) — comparing 25% to 20% is meaningful regardless of currency, so
-`app/compare/[a]/[b]/page.tsx` and `CompareView` lead with the rate difference. Dollar
-figures (total tax, take-home) are still shown per side, but explicitly labeled with each
-region's own currency code and never combined, summed, or implied to be equivalent — no
-silent CAD-vs-USD false-equivalence. True FX-aware dollar conversion is still deferred until
-there's a defined strategy for sourcing and caching exchange rates.
+`currency` lives on every `TaxComponent`. The compare picker (components/compare-picker.tsx)
+lets a user pick any two regions across any enabled country, including a US state against a
+Canadian province, or a currency-mismatched pair like a CAD region against a JPY one.
+**Effective tax rate is currency-agnostic** (a percentage, not a dollar amount) — comparing
+25% to 20% is meaningful regardless of currency, so `app/compare/[a]/[b]/page.tsx` and
+`CompareView` lead with the rate difference regardless of conversion status.
+
+Dollar amounts *are* now converted for cross-currency pairs, via a static, versioned
+PPP-rate snapshot rather than a live FX feed — see `data/exchange-rates/{year}.json`
+(schema in `src/data/schema.ts`, loader in `src/data/exchangeRates.ts`,
+`src/calc/currency.ts`'s `convertAmount`) and its own section in
+[data/README.md](../data/README.md). Deliberately PPP (purchasing-power parity), not spot
+market FX: PPP answers "comparable purchasing power," which is what a tax-burden comparison
+wants, whereas a market rate is a volatile, forex-desk number that would make the *same*
+comparison look different week to week for reasons unrelated to tax law — a bad fit for a
+site built on static, once-or-twice-a-year-refreshed official data. Same "commit the data,
+never call a live API at request time" model as everything else here, which also means
+there's no rate-limit/quota exposure. If a currency or year isn't covered by the snapshot,
+every call site falls back to the pre-conversion behavior (dollar figures shown unconverted,
+explicitly labeled per region's own currency, never combined or implied equivalent) rather
+than crashing or guessing.
 
 ## Caching
 

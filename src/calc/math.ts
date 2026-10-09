@@ -38,11 +38,27 @@ export interface DeductionCreditTotals {
   credits: number;
 }
 
+/** Looks up the flat amount for whichever tier `base` falls into. */
+function resolveSteppedAmount(base: number, tiers: { upTo: number | null; amount: number }[]): number {
+  for (const tier of tiers) {
+    if (tier.upTo === null || base <= tier.upTo) return tier.amount;
+  }
+  return tiers[tiers.length - 1]!.amount;
+}
+
 /**
  * Sums a TaxComponent's deductions and credits against a taxable base,
  * resolving filing-status-conditional amounts and phase-outs. Throws if an
  * amount needs a filing status that wasn't supplied, rather than silently
  * treating it as zero.
+ *
+ * `bracketedAmount`/`steppedAmount` entries (see schema.ts) are looked up
+ * against a *running* base that shrinks by each prior deduction-kind
+ * entry's resolved amount, in array order — e.g. Japan's 基礎控除 tiers are
+ * defined against income *after* 給与所得控除, not gross income, so
+ * 給与所得控除 must be listed first. Plain `amount` entries are unaffected
+ * and keep resolving (and phasing out) against the original `base` exactly
+ * as before, so every existing country's behavior is unchanged.
  */
 export function resolveDeductionsAndCredits(
   deductionsCredits: DeductionOrCredit[] | undefined,
@@ -52,17 +68,38 @@ export function resolveDeductionsAndCredits(
 ): DeductionCreditTotals {
   let deductions = 0;
   let credits = 0;
+  let runningBase = base;
 
   for (const dc of deductionsCredits ?? []) {
-    const resolved = resolveAmount(dc.amount, filingStatus);
-    if (resolved === undefined) {
-      throw new Error(
-        `${context}: "${dc.name}" (${dc.kind}) requires a filingStatus to resolve its amount`,
-      );
+    let resolved: number;
+    let lookupBase = base;
+
+    if (dc.bracketedAmount) {
+      resolved = taxFromBrackets(runningBase, dc.bracketedAmount);
+      lookupBase = runningBase;
+    } else if (dc.steppedAmount) {
+      resolved = resolveSteppedAmount(runningBase, dc.steppedAmount);
+      lookupBase = runningBase;
+    } else {
+      // The schema's refine() guarantees exactly one of amount/
+      // bracketedAmount/steppedAmount is set; neither of the latter two
+      // matched above, so amount must be defined here.
+      const amount = resolveAmount(dc.amount!, filingStatus);
+      if (amount === undefined) {
+        throw new Error(
+          `${context}: "${dc.name}" (${dc.kind}) requires a filingStatus to resolve its amount`,
+        );
+      }
+      resolved = amount;
     }
-    const applied = applyPhaseOut(resolved, dc.phaseOut, base);
-    if (dc.kind === "deduction") deductions += applied;
-    else credits += applied;
+
+    const applied = applyPhaseOut(resolved, dc.phaseOut, lookupBase);
+    if (dc.kind === "deduction") {
+      deductions += applied;
+      runningBase = Math.max(0, runningBase - applied);
+    } else {
+      credits += applied;
+    }
   }
 
   return { deductions, credits };

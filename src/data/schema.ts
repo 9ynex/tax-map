@@ -7,7 +7,7 @@ import { z } from "zod";
  * this is the guardrail the annual data-update PRs (docs/deployment.md) rely on.
  */
 
-export const CountryCodeSchema = z.enum(["US", "CA"]);
+export const CountryCodeSchema = z.enum(["US", "CA", "MX", "GB", "FR", "JP", "GL", "BR"]);
 export type CountryCode = z.infer<typeof CountryCodeSchema>;
 
 export const JurisdictionLevelSchema = z.enum([
@@ -68,12 +68,44 @@ const FilingStatusAmountSchema = z.union([
   z.record(FilingStatusSchema, z.number()),
 ]);
 
-export const DeductionOrCreditSchema = z.object({
-  name: z.string().min(1),
-  kind: DeductionOrCreditKindSchema,
-  amount: FilingStatusAmountSchema,
-  phaseOut: z.object({ start: z.number(), end: z.number() }).optional(),
-});
+const SteppedAmountSchema = z
+  .array(
+    z.object({
+      // Upper bound of this tier (inclusive), or null for the final,
+      // unbounded tier. Tiers must be listed in ascending order.
+      upTo: z.number().positive().nullable(),
+      amount: z.number(),
+    }),
+  )
+  .min(1);
+
+export const DeductionOrCreditSchema = z
+  .object({
+    name: z.string().min(1),
+    kind: DeductionOrCreditKindSchema,
+    amount: FilingStatusAmountSchema.optional(),
+    // A cumulative deduction whose amount grows at a different marginal
+    // rate per income band, reusing the exact same TaxBracket[] shape (and
+    // computed via the same taxFromBrackets() cumulative-sum logic) as an
+    // ordinary tax bracket — just interpreted as a deduction amount instead
+    // of a tax amount. Modeled for Japan's 給与所得控除 (employment income
+    // deduction), whose amount grows at 100%/0%/30%/20%/10%/0% marginal
+    // rates across 6 income bands — see data/README.md.
+    bracketedAmount: BracketSetSchema.optional(),
+    // A step-function deduction that jumps to a different flat amount once
+    // `base` crosses each tier's threshold — genuinely non-cumulative,
+    // unlike bracketedAmount above. Modeled for Japan's 基礎控除 (basic
+    // deduction), a real "cliff" in the law (e.g. ¥950,000 up to ¥1.32M of
+    // total income, then a flat ¥880,000 for the next band, not a
+    // continuation of the previous tier's total) — see data/README.md.
+    steppedAmount: SteppedAmountSchema.optional(),
+    phaseOut: z.object({ start: z.number(), end: z.number() }).optional(),
+  })
+  .refine(
+    (d) =>
+      [d.amount, d.bracketedAmount, d.steppedAmount].filter((x) => x !== undefined).length === 1,
+    { message: "a DeductionOrCredit must define exactly one of amount, bracketedAmount, or steppedAmount" },
+  );
 export type DeductionOrCredit = z.infer<typeof DeductionOrCreditSchema>;
 
 export const TaxComponentTypeSchema = z.enum([
@@ -167,3 +199,29 @@ export const TaxYearSnapshotSchema = z.object({
   components: z.array(TaxComponentSchema).min(1),
 });
 export type TaxYearSnapshot = z.infer<typeof TaxYearSnapshotSchema>;
+
+// Cross-country/cross-currency comparisons (docs/data.md's compare page) need
+// a way to say "this much of currency A is worth roughly this much of
+// currency B" without implying a false 1:1 equivalence. `basis: "ppp"` marks
+// this as the IMF World Economic Outlook's "Implied PPP conversion rate" —
+// units of national currency per international dollar — rather than a spot
+// market exchange rate: PPP answers "comparable purchasing power," which is
+// what a tax-burden comparison actually wants, whereas market FX is a
+// volatile, forex-desk-oriented number that would make the same comparison
+// look different week to week for reasons having nothing to do with tax law.
+// This is a static, once-or-twice-a-year-refreshed snapshot (see
+// src/data/exchangeRates.ts), the same "commit the data, don't call a live
+// API at request time" model every other dataset in this app already uses.
+export const ExchangeRateBasisSchema = z.enum(["ppp"]);
+export type ExchangeRateBasis = z.infer<typeof ExchangeRateBasisSchema>;
+
+export const ExchangeRateSnapshotSchema = z.object({
+  year: z.number().int().min(2000).max(2100),
+  basis: ExchangeRateBasisSchema,
+  // ISO 4217 currency code -> units of that currency per 1 international
+  // dollar (IMF's PPPEX convention). USD is always 1 by definition.
+  rates: z.record(z.string().length(3), z.number().positive()),
+  precision: PrecisionSchema,
+  sourceUrl: z.string().url(),
+});
+export type ExchangeRateSnapshot = z.infer<typeof ExchangeRateSnapshotSchema>;

@@ -154,6 +154,8 @@ export function MapExplorer({
               projection={country.map.projection}
               center={country.map.center}
               scale={country.map.scale}
+              width={country.map.width}
+              height={country.map.height}
               regions={regionValues}
               onSelect={handleSelect}
             />

@@ -1,0 +1,18 @@
+{
+  "jurisdictionId": "jp-aomori",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "健康保険（協会けんぽ・青森県）",
+      "type": "payroll",
+      "flatRate": 0.04925,
+      "cap": 16680000,
+      "currency": "JPY",
+      "effectiveDate": "2026-04-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.kyoukaikenpo.or.jp/about/business/insurance_rate/rate_prefectures/r08/index.html"
+    }
+  ]
+}

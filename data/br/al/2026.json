@@ -1,0 +1,17 @@
+{
+  "jurisdictionId": "br-al",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "ICMS (Alagoas)",
+      "type": "consumption",
+      "flatRate": 0.205,
+      "currency": "BRL",
+      "effectiveDate": "2026-04-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.mobills.com.br/tabelas/icms/"
+    }
+  ]
+}

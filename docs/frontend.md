@@ -69,10 +69,11 @@ Core loop: income in → map colored by result → click a region to expand full
 
 5. **Build comparison in from day one.** The stated purpose is comparing regions, so clicking
    should *pin* a region ("2 selected — compare" bar appears) rather than only ever showing one
-   at a time. Side-by-side breakdown is likely the single most valuable screen in the app. Per
-   [data.md](data.md), v1 only allows pinning jurisdictions that share a currency (no
-   USD-vs-CAD comparison yet) — the UI should disable or hide cross-currency pinning rather
-   than silently producing a meaningless comparison.
+   at a time. Side-by-side breakdown is likely the single most valuable screen in the app.
+   Cross-currency pinning (e.g. a CAD region against a JPY one) is allowed, not hidden — see
+   [data.md](data.md)'s cross-country comparison scope section for how dollar amounts get a
+   PPP conversion (with a visible, sourced caption) rather than being silently compared as if
+   the same currency, or blocked outright.
 
 6. **Map defaults zoomed in, not a full-country overview.** Mobile touch targets make small
    states/provinces (Rhode Island, Delaware, PEI) unusable at a full-map zoom level, so the

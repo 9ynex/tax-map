@@ -42,24 +42,44 @@ export interface CountryConfig {
     /** Name of the object within the TopoJSON's `objects` map. */
     objectName: string;
     /**
-     * Any d3-geo projection export name (react-simple-maps resolves it by
-     * that string directly). "geoAlbersUsa" is the standard composite
-     * projection for the US — it insets Alaska/Hawaii near the lower 48
-     * instead of leaving them at their true, far-flung coordinates, which
-     * is what keeps every state comfortably tappable at a sane zoom level
-     * (docs/frontend.md #6). A plain single-piece country (Canada) just
-     * uses an ordinary projection like "geoMercator".
+     * Either a plain d3-geo projection export name (react-simple-maps
+     * resolves it by that string directly), or the name of a composite
+     * projection from the `d3-composite-projections` package (resolved by
+     * components/map/tax-map.tsx, not react-simple-maps itself — see its
+     * comment). "geoAlbersUsa" is the standard composite projection for the
+     * US — it insets Alaska/Hawaii near the lower 48 instead of leaving them
+     * at their true, far-flung coordinates, which is what keeps every state
+     * comfortably tappable at a sane zoom level (docs/frontend.md #6).
+     * "geoConicConformalFrance" is the same idea for France's overseas
+     * régions (Guadeloupe, Martinique, Guyane, Réunion, Mayotte), which are
+     * genuinely thousands of km from mainland France — without an inset,
+     * a single-piece projection would either crop them out or force the
+     * mainland down to an unusably tiny scale. A plain single-piece country
+     * (Canada) just uses an ordinary projection like "geoMercator".
      */
-    projection: "geoMercator" | "geoAlbersUsa";
+    projection: "geoMercator" | "geoAlbersUsa" | "geoConicConformalFrance";
     /**
      * [longitude, latitude] map center for the default zoomed-in view
-     * (docs/frontend.md #6). Ignored by composite projections like
-     * "geoAlbersUsa", which have no `.center()` — react-simple-maps simply
-     * never calls it for those, so this is only meaningful for
-     * "geoMercator"-style countries.
+     * (docs/frontend.md #6). Ignored by composite projections — both
+     * "geoAlbersUsa" (no `.center()` method, so react-simple-maps never
+     * calls it) and "geoConicConformalFrance" (a fully self-contained,
+     * pre-scaled/pre-translated projection object passed straight through
+     * to react-simple-maps, which skips its own config-application step
+     * entirely whenever `projection` is a function rather than a string —
+     * see tax-map.tsx). Only meaningful for "geoMercator"-style countries.
      */
-    center: [number, number];
-    scale: number;
+    center?: [number, number];
+    scale?: number;
+    /**
+     * ComposableMap width/height in SVG user units. Every plain-projection
+     * country uses react-simple-maps' own 800x600 default (omit these).
+     * `d3-composite-projections`' composites are each pre-tuned for one
+     * specific frame baked into the projection itself — France's is
+     * "configured by default for 960×500" per its own source comment — so
+     * the frame must match or the mainland/inset placement will be off.
+     */
+    width?: number;
+    height?: number;
   };
   /** Whether this country is exposed in the UI yet — lets a country's data/config land ahead of its launch. */
   enabled: boolean;

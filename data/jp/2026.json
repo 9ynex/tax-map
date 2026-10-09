@@ -1,0 +1,144 @@
+{
+  "jurisdictionId": "jp",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "所得税",
+      "type": "income",
+      "brackets": [
+        { "min": 0, "max": 1950000, "rate": 0.05 },
+        { "min": 1950000, "max": 3300000, "rate": 0.10 },
+        { "min": 3300000, "max": 6950000, "rate": 0.20 },
+        { "min": 6950000, "max": 9000000, "rate": 0.23 },
+        { "min": 9000000, "max": 18000000, "rate": 0.33 },
+        { "min": 18000000, "max": 40000000, "rate": 0.40 },
+        { "min": 40000000, "max": null, "rate": 0.45 }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "給与所得控除",
+          "kind": "deduction",
+          "bracketedAmount": [
+            { "min": 0, "max": 651000, "rate": 1 },
+            { "min": 651000, "max": 1900000, "rate": 0 },
+            { "min": 1900000, "max": 3600000, "rate": 0.3 },
+            { "min": 3600000, "max": 6600000, "rate": 0.2 },
+            { "min": 6600000, "max": 8500000, "rate": 0.1 },
+            { "min": 8500000, "max": null, "rate": 0 }
+          ]
+        },
+        {
+          "name": "基礎控除",
+          "kind": "deduction",
+          "steppedAmount": [
+            { "upTo": 1320000, "amount": 950000 },
+            { "upTo": 3360000, "amount": 880000 },
+            { "upTo": 4890000, "amount": 680000 },
+            { "upTo": 6550000, "amount": 630000 },
+            { "upTo": 23500000, "amount": 580000 },
+            { "upTo": 24000000, "amount": 480000 },
+            { "upTo": 24500000, "amount": 320000 },
+            { "upTo": 25000000, "amount": 160000 },
+            { "upTo": null, "amount": 0 }
+          ]
+        }
+      ],
+      "currency": "JPY",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/shinkoku/pdf/r08/zeigakuhyo.pdf"
+    },
+    {
+      "name": "復興特別所得税",
+      "type": "income",
+      "surtax": {
+        "targetName": "所得税",
+        "brackets": [{ "min": 0, "max": null, "rate": 0.021 }]
+      },
+      "currency": "JPY",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.nta.go.jp/publication/pamph/shotoku/fukko_tokubetsu/index.htm"
+    },
+    {
+      "name": "厚生年金保険",
+      "type": "payroll",
+      "flatRate": 0.0915,
+      "cap": 7800000,
+      "currency": "JPY",
+      "effectiveDate": "2026-04-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.mhlw.go.jp/topics/bukyoku/nenkin/nenkin/pdf/tp0315-2c.pdf"
+    },
+    {
+      "name": "雇用保険",
+      "type": "payroll",
+      "flatRate": 0.005,
+      "currency": "JPY",
+      "effectiveDate": "2026-04-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://jsite.mhlw.go.jp/tokyo-hellowork/list/tachikawa/kyushokusha/koyouhokenryouritu08.html"
+    },
+    {
+      "name": "子ども・子育て支援金",
+      "type": "payroll",
+      "flatRate": 0.00115,
+      "cap": 16680000,
+      "currency": "JPY",
+      "effectiveDate": "2026-04-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.kyoukaikenpo.or.jp/lp/2026hokenryou/"
+    },
+    {
+      "name": "住民税",
+      "type": "income",
+      "brackets": [{ "min": 0, "max": null, "rate": 0.10 }],
+      "deductionsCredits": [
+        {
+          "name": "給与所得控除",
+          "kind": "deduction",
+          "bracketedAmount": [
+            { "min": 0, "max": 651000, "rate": 1 },
+            { "min": 651000, "max": 1900000, "rate": 0 },
+            { "min": 1900000, "max": 3600000, "rate": 0.3 },
+            { "min": 3600000, "max": 6600000, "rate": 0.2 },
+            { "min": 6600000, "max": 8500000, "rate": 0.1 },
+            { "min": 8500000, "max": null, "rate": 0 }
+          ]
+        },
+        {
+          "name": "個人住民税基礎控除",
+          "kind": "deduction",
+          "amount": 430000
+        }
+      ],
+      "currency": "JPY",
+      "effectiveDate": "2026-04-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "estimated",
+      "sourceUrl": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/150790_06.html"
+    },
+    {
+      "name": "消費税",
+      "type": "consumption",
+      "flatRate": 0.10,
+      "currency": "JPY",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6105.htm"
+    }
+  ]
+}

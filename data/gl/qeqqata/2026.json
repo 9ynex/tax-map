@@ -1,0 +1,60 @@
+{
+  "jurisdictionId": "gl-qeqqata",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Fælleskommunal skat og kommuneskat (Qeqqata)",
+      "type": "income",
+      "brackets": [
+        {
+          "min": 0,
+          "max": null,
+          "rate": 0.32
+        }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "Beskæftigelsesfradrag",
+          "kind": "credit",
+          "bracketedAmount": [
+            {
+              "min": 0,
+              "max": 70000,
+              "rate": 0
+            },
+            {
+              "min": 70000,
+              "max": 160000,
+              "rate": 0.0735
+            },
+            {
+              "min": 160000,
+              "max": null,
+              "rate": 0
+            }
+          ],
+          "phaseOut": {
+            "start": 250000,
+            "end": 500000
+          }
+        },
+        {
+          "name": "Personfradrag",
+          "kind": "deduction",
+          "amount": 60000
+        },
+        {
+          "name": "Standardfradrag",
+          "kind": "deduction",
+          "amount": 10000
+        }
+      ],
+      "currency": "DKK",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "estimated",
+      "sourceUrl": "https://aka.gl/emner/borger/skat/skat---udskrivningsprocenter?sc_lang=da"
+    }
+  ]
+}

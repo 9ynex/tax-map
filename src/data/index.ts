@@ -12,6 +12,8 @@ export {
 
 export { loadSnapshot, loadSnapshotChain } from "./snapshots";
 
+export { loadExchangeRates } from "./exchangeRates";
+
 export {
   resolveBracketSet,
   requiresFilingStatus,
@@ -31,4 +33,6 @@ export type {
   Precision,
   TaxComponent,
   TaxYearSnapshot,
+  ExchangeRateBasis,
+  ExchangeRateSnapshot,
 } from "./schema";

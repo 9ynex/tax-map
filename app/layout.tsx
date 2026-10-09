@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Disclaimer } from "@/components/disclaimer";
+import { RegionSwitcher } from "@/components/region-switcher";
 import { listEnabledCountries } from "@/src/countries/index";
+import { listAllNavTargets } from "@/src/countries/listNavTargets";
 import "./globals.css";
 
 // Built from the country registry rather than hardcoded — this copy is
@@ -45,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/" className="text-lg font-semibold tracking-tight">
               Tax Map
             </Link>
+            <RegionSwitcher targets={listAllNavTargets()} />
           </header>
           <main className="flex-1 pb-16">{children}</main>
           <footer className="flex flex-col gap-3 border-t border-border py-6">

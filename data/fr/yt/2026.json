@@ -1,0 +1,18 @@
+{
+  "jurisdictionId": "fr-yt",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "TVA (non applicable à Mayotte)",
+      "type": "consumption",
+      "flatRate": 0,
+      "supersedesParent": "TVA",
+      "currency": "EUR",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.douane.gouv.fr/fiche/tva-dans-les-dom"
+    }
+  ]
+}

@@ -107,4 +107,63 @@ describe("resolveDeductionsAndCredits", () => {
       credits: 0,
     });
   });
+
+  it("bracketedAmount computes a cumulative deduction via the same marginal-bracket logic as tax brackets", () => {
+    const items: DeductionOrCredit[] = [
+      {
+        name: "Employment income deduction",
+        kind: "deduction",
+        bracketedAmount: [
+          { min: 0, max: 100, rate: 1 },
+          { min: 100, max: 200, rate: 0 },
+          { min: 200, max: null, rate: 0.3 },
+        ],
+      },
+    ];
+    // 100% of the first 100 (=100) + 0% of the next 100 (=0) + 30% of the 50 above 200 (=15)
+    expect(resolveDeductionsAndCredits(items, 250, undefined, "ctx").deductions).toBeCloseTo(115, 6);
+  });
+
+  it("steppedAmount picks the flat amount for whichever tier the base falls into, not a cumulative total", () => {
+    const items: DeductionOrCredit[] = [
+      {
+        name: "Basic deduction",
+        kind: "deduction",
+        steppedAmount: [
+          { upTo: 100, amount: 950 },
+          { upTo: 300, amount: 880 },
+          { upTo: null, amount: 580 },
+        ],
+      },
+    ];
+    expect(resolveDeductionsAndCredits(items, 50, undefined, "ctx").deductions).toBe(950);
+    expect(resolveDeductionsAndCredits(items, 300, undefined, "ctx").deductions).toBe(880);
+    expect(resolveDeductionsAndCredits(items, 301, undefined, "ctx").deductions).toBe(580);
+  });
+
+  it("evaluates a later steppedAmount against the running base after an earlier bracketedAmount deduction, not the original base", () => {
+    // Mirrors Japan: 給与所得控除 (bracketedAmount) reduces gross income
+    // first, then 基礎控除's steppedAmount tier is looked up against what's
+    // left, not against gross income directly.
+    const items: DeductionOrCredit[] = [
+      {
+        name: "Employment income deduction",
+        kind: "deduction",
+        bracketedAmount: [{ min: 0, max: null, rate: 0.5 }],
+      },
+      {
+        name: "Basic deduction",
+        kind: "deduction",
+        steppedAmount: [
+          { upTo: 400, amount: 900 },
+          { upTo: null, amount: 500 },
+        ],
+      },
+    ];
+    // Gross 1000 -> employment deduction 500 -> running base 500, which is
+    // above the 400 tier threshold, so the basic deduction should be 500
+    // (the second tier), not 900 (which a gross-income lookup would wrongly pick).
+    const result = resolveDeductionsAndCredits(items, 1000, undefined, "ctx");
+    expect(result.deductions).toBe(500 + 500);
+  });
 });

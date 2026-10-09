@@ -1,0 +1,65 @@
+{
+  "jurisdictionId": "uk",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Income Tax",
+      "type": "income",
+      "brackets": [
+        { "min": 0, "max": 37700, "rate": 0.20 },
+        { "min": 37700, "max": 112570, "rate": 0.40 },
+        { "min": 112570, "max": null, "rate": 0.45 }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "Personal Allowance",
+          "kind": "deduction",
+          "amount": 12570,
+          "phaseOut": { "start": 100000, "end": 125140 }
+        }
+      ],
+      "currency": "GBP",
+      "effectiveDate": "2026-04-06",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.gov.uk/income-tax-rates"
+    },
+    {
+      "name": "National Insurance (Class 1, main rate)",
+      "type": "payroll",
+      "flatRate": 0.08,
+      "floor": 12570,
+      "cap": 50270,
+      "currency": "GBP",
+      "effectiveDate": "2026-04-06",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027"
+    },
+    {
+      "name": "National Insurance (Class 1, additional rate)",
+      "type": "payroll",
+      "flatRate": 0.02,
+      "floor": 50270,
+      "currency": "GBP",
+      "effectiveDate": "2026-04-06",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027"
+    },
+    {
+      "name": "VAT",
+      "type": "consumption",
+      "flatRate": 0.20,
+      "currency": "GBP",
+      "effectiveDate": "2026-04-06",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.gov.uk/vat-rates"
+    }
+  ]
+}

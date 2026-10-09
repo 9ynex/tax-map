@@ -1,0 +1,17 @@
+{
+  "jurisdictionId": "br-pr",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "ICMS (Paraná)",
+      "type": "consumption",
+      "flatRate": 0.195,
+      "currency": "BRL",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.mobills.com.br/tabelas/icms/"
+    }
+  ]
+}

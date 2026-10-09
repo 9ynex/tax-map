@@ -1,0 +1,109 @@
+{
+  "jurisdictionId": "mx",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "ISR",
+      "type": "income",
+      "brackets": [
+        { "min": 0, "max": 10135.11, "rate": 0.0192 },
+        { "min": 10135.11, "max": 86022.11, "rate": 0.064 },
+        { "min": 86022.11, "max": 151176.19, "rate": 0.1088 },
+        { "min": 151176.19, "max": 175735.66, "rate": 0.16 },
+        { "min": 175735.66, "max": 210403.69, "rate": 0.1792 },
+        { "min": 210403.69, "max": 424353.97, "rate": 0.2136 },
+        { "min": 424353.97, "max": 668840.14, "rate": 0.2352 },
+        { "min": 668840.14, "max": 1276925.98, "rate": 0.30 },
+        { "min": 1276925.98, "max": 1702567.97, "rate": 0.32 },
+        { "min": 1702567.97, "max": 5107703.92, "rate": 0.34 },
+        { "min": 5107703.92, "max": null, "rate": 0.35 }
+      ],
+      "deductionsCredits": [
+        {
+          "name": "Subsidio para el empleo",
+          "kind": "credit",
+          "amount": 6427.80,
+          "phaseOut": { "start": 137911.92, "end": 137911.92 }
+        }
+      ],
+      "currency": "MXN",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.dof.gob.mx/"
+    },
+    {
+      "name": "IMSS - Enfermedad y Maternidad (excedente)",
+      "type": "payroll",
+      "flatRate": 0.004,
+      "floor": 128383.92,
+      "cap": 1069866,
+      "currency": "MXN",
+      "effectiveDate": "2026-02-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.imss.gob.mx/personas-trabajadoras-hogar/cuotas"
+    },
+    {
+      "name": "IMSS - Prestaciones en Dinero",
+      "type": "payroll",
+      "flatRate": 0.0025,
+      "cap": 1069866,
+      "currency": "MXN",
+      "effectiveDate": "2026-02-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.imss.gob.mx/personas-trabajadoras-hogar/cuotas"
+    },
+    {
+      "name": "IMSS - Gastos Médicos de Pensionados",
+      "type": "payroll",
+      "flatRate": 0.00375,
+      "cap": 1069866,
+      "currency": "MXN",
+      "effectiveDate": "2026-02-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.imss.gob.mx/personas-trabajadoras-hogar/cuotas"
+    },
+    {
+      "name": "IMSS - Invalidez y Vida",
+      "type": "payroll",
+      "flatRate": 0.00625,
+      "cap": 1069866,
+      "currency": "MXN",
+      "effectiveDate": "2026-02-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.imss.gob.mx/personas-trabajadoras-hogar/cuotas"
+    },
+    {
+      "name": "IMSS - Cesantía en Edad Avanzada y Vejez",
+      "type": "payroll",
+      "flatRate": 0.01125,
+      "cap": 1069866,
+      "currency": "MXN",
+      "effectiveDate": "2026-02-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "statutory",
+      "sourceUrl": "https://www.imss.gob.mx/personas-trabajadoras-hogar/cuotas"
+    },
+    {
+      "name": "IVA",
+      "type": "consumption",
+      "flatRate": 0.16,
+      "currency": "MXN",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": false,
+      "precision": "statutory",
+      "sourceUrl": "https://www.sat.gob.mx/"
+    }
+  ]
+}

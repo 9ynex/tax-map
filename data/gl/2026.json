@@ -1,0 +1,29 @@
+{
+  "jurisdictionId": "gl",
+  "taxYear": 2026,
+  "components": [
+    {
+      "name": "Landsskat",
+      "type": "income",
+      "brackets": [{ "min": 0, "max": null, "rate": 0.10 }],
+      "deductionsCredits": [
+        {
+          "name": "Personfradrag",
+          "kind": "deduction",
+          "amount": 60000
+        },
+        {
+          "name": "Standardfradrag",
+          "kind": "deduction",
+          "amount": 10000
+        }
+      ],
+      "currency": "DKK",
+      "effectiveDate": "2026-01-01",
+      "taxYear": 2026,
+      "indexedToInflation": true,
+      "precision": "estimated",
+      "sourceUrl": "https://aka.gl/emner/borger/skat/skat---udskrivningsprocenter?sc_lang=da"
+    }
+  ]
+}

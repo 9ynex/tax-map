@@ -2,12 +2,20 @@ import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import { Suspense } from "react";
 
-import { getAncestors, getChildren, getJurisdiction, loadSnapshotChain } from "@/src/data/index";
+import {
+  getAncestors,
+  getChildren,
+  getJurisdiction,
+  loadExchangeRates,
+  loadSnapshotChain,
+} from "@/src/data/index";
 import { computeTaxFromChain } from "@/src/calc/computeTaxFromChain";
+import { convertAmount } from "@/src/calc/currency";
 import { listEnabledCountries } from "@/src/countries/index";
 import type { CountryConfig } from "@/src/countries/types";
 import { CompareView } from "@/components/breakdown/compare-view";
 import { TaxYearBadge } from "@/components/tax-year-badge";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 import { parseIncome } from "@/lib/url-state";
 import { formatCurrency, formatPercent } from "@/lib/format";
 
@@ -20,6 +28,29 @@ function resolveCountryFor(jurisdictionId: string): CountryConfig | undefined {
   const [root] = getAncestors(jurisdictionId);
   if (!root) return undefined;
   return listEnabledCountries().find((c) => c.rootJurisdictionId === root.id);
+}
+
+/**
+ * PPP-converts `income` (in `fromCurrency`) into `toCurrency` for the FAQ/
+ * metadata text — same currencies return it unchanged, and a missing
+ * exchange-rate snapshot or currency falls back to the raw number rather
+ * than throwing, matching CompareView's own client-side fallback so the
+ * server-rendered text never contradicts what the page actually shows.
+ */
+function convertedIncomeFor(
+  income: number,
+  fromCurrency: string,
+  toCurrency: string,
+  year: number,
+): number {
+  if (fromCurrency === toCurrency) return income;
+  const rates = loadExchangeRates(year);
+  if (!rates) return income;
+  try {
+    return convertAmount(income, fromCurrency, toCurrency, rates);
+  } catch {
+    return income;
+  }
 }
 
 /**
@@ -74,6 +105,7 @@ export async function generateMetadata({
   const income = parseIncome(sp, countryA.defaultIncome);
   const snapshotsA = loadSnapshotChain(a, countryA.taxYear);
   const snapshotsB = loadSnapshotChain(b, countryB.taxYear);
+  const incomeB = convertedIncomeFor(income, countryA.currency, countryB.currency, countryA.taxYear);
   const rateA = computeTaxFromChain(snapshotsA, {
     jurisdictionId: a,
     income,
@@ -82,7 +114,7 @@ export async function generateMetadata({
   }).effectiveRate;
   const rateB = computeTaxFromChain(snapshotsB, {
     jurisdictionId: b,
-    income,
+    income: incomeB,
     taxYear: countryB.taxYear,
     filingStatus: countryB.defaultFilingStatus,
   }).effectiveRate;
@@ -117,10 +149,11 @@ export default async function ComparePage({
   const regionB = getJurisdiction(canonicalB);
   if (!regionA || !regionB) notFound();
 
-  // Cross-country (and so cross-currency) pairs are allowed — v1 still has
-  // no FX conversion (docs/data.md), so CompareView compares effective
-  // rate (currency-agnostic) and keeps each side's dollar figures in its
-  // own currency rather than implying a false equivalence.
+  // Cross-country (and so cross-currency) pairs are allowed. Rather than
+  // reusing the same raw number for both currencies (misleading — see
+  // convertedIncomeFor's callers), regionB's income is PPP-converted from
+  // regionA's before its tax is computed, with a graceful fallback to the
+  // raw number if no exchange-rate snapshot covers this pair yet.
   const countryA = resolveCountryFor(canonicalA);
   const countryB = resolveCountryFor(canonicalB);
   if (!countryA || !countryB) notFound();
@@ -130,6 +163,8 @@ export default async function ComparePage({
   if (snapshotsA.length === 0 || snapshotsB.length === 0) notFound();
 
   const income = parseIncome(sp, countryA.defaultIncome);
+  const incomeB = convertedIncomeFor(income, countryA.currency, countryB.currency, countryA.taxYear);
+  const exchangeRates = loadExchangeRates(countryA.taxYear);
 
   // FAQPage JSON-LD targets the "X vs Y taxes" comparison search pattern
   // (docs/seo.md #6) the same way the single-region pages already target
@@ -143,7 +178,7 @@ export default async function ComparePage({
   });
   const breakdownB = computeTaxFromChain(snapshotsB, {
     jurisdictionId: canonicalB,
-    income,
+    income: incomeB,
     taxYear: countryB.taxYear,
     filingStatus: countryB.defaultFilingStatus,
   });
@@ -153,6 +188,7 @@ export default async function ComparePage({
       : [{ region: regionB, breakdown: breakdownB }, { region: regionA, breakdown: breakdownA }];
   const sameCurrency = breakdownA.currency === breakdownB.currency;
   const rateDiffPoints = (higher.breakdown.effectiveRate - lower.breakdown.effectiveRate) * 100;
+  const incomeWasConverted = !sameCurrency && incomeB !== income;
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -169,11 +205,17 @@ export default async function ComparePage({
               `versus ${formatPercent(higher.breakdown.effectiveRate)} in ${higher.region.name} — ` +
               `a difference of about ${formatCurrency(higher.breakdown.totalTax - lower.breakdown.totalTax, countryA.currency)} in total tax. ` +
               `This is an estimate, not tax advice.`
-            : `On an equivalent income of ${formatCurrency(income, countryA.currency)}/${formatCurrency(income, countryB.currency)}, ` +
-              `${lower.region.name} has the lower effective rate at ${formatPercent(lower.breakdown.effectiveRate)}, ` +
-              `versus ${formatPercent(higher.breakdown.effectiveRate)} in ${higher.region.name} — ` +
-              `${rateDiffPoints.toFixed(1)} percentage points higher. Figures are in each region's own currency ` +
-              `(${breakdownA.currency}/${breakdownB.currency}), not converted. This is an estimate, not tax advice.`,
+            : incomeWasConverted
+              ? `On ${formatCurrency(income, countryA.currency)} (≈ ${formatCurrency(incomeB, countryB.currency)} at ` +
+                `purchasing-power parity) for tax year ${countryA.taxYear}, ${lower.region.name} has the lower ` +
+                `effective rate at ${formatPercent(lower.breakdown.effectiveRate)}, versus ` +
+                `${formatPercent(higher.breakdown.effectiveRate)} in ${higher.region.name} — ` +
+                `${rateDiffPoints.toFixed(1)} percentage points higher. This is an estimate, not tax advice.`
+              : `On an equivalent income of ${formatCurrency(income, countryA.currency)}/${formatCurrency(income, countryB.currency)}, ` +
+                `${lower.region.name} has the lower effective rate at ${formatPercent(lower.breakdown.effectiveRate)}, ` +
+                `versus ${formatPercent(higher.breakdown.effectiveRate)} in ${higher.region.name} — ` +
+                `${rateDiffPoints.toFixed(1)} percentage points higher. Figures are in each region's own currency ` +
+                `(${breakdownA.currency}/${breakdownB.currency}), not converted. This is an estimate, not tax advice.`,
         },
       },
     ],
@@ -187,6 +229,7 @@ export default async function ComparePage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <div className="flex flex-col gap-2">
+        <Breadcrumbs items={[{ label: "World", href: "/" }, { label: "Compare" }]} />
         {countryA.taxYear === countryB.taxYear ? (
           <TaxYearBadge taxYear={countryA.taxYear} />
         ) : (
@@ -209,6 +252,7 @@ export default async function ComparePage({
               name: regionA.name,
               snapshots: snapshotsA,
               taxYear: countryA.taxYear,
+              currency: countryA.currency,
               filingStatus: countryA.defaultFilingStatus,
             },
             {
@@ -216,10 +260,12 @@ export default async function ComparePage({
               name: regionB.name,
               snapshots: snapshotsB,
               taxYear: countryB.taxYear,
+              currency: countryB.currency,
               filingStatus: countryB.defaultFilingStatus,
             },
           ]}
           initialIncome={income}
+          exchangeRates={exchangeRates}
         />
       </Suspense>
     </div>

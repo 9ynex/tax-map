@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
 import { Suspense } from "react";
 
 import { getChildren, loadSnapshotChain } from "@/src/data/index";
 import { getEnabledCountryBySlug, listEnabledCountries } from "@/src/countries/index";
 import { RegionDetail } from "@/components/breakdown/region-detail";
 import { TaxYearBadge } from "@/components/tax-year-badge";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 import { formatCurrency } from "@/lib/format";
 
 /**
@@ -71,15 +70,15 @@ export default async function CuratedIncomePage({
 
   return (
     <div className="flex flex-col gap-6">
-      <Link
-        href={`/${country.urlSlug}/${region.slug}`}
-        className="inline-flex w-fit items-center gap-1.5 text-sm text-muted hover:text-foreground"
-      >
-        <ArrowLeft className="h-4 w-4" />
-        Back to {region.name}
-      </Link>
-
       <div className="flex flex-col gap-2">
+        <Breadcrumbs
+          items={[
+            { label: "World", href: "/" },
+            { label: country.name, href: `/${country.urlSlug}` },
+            { label: region.name, href: `/${country.urlSlug}/${region.slug}` },
+            { label: formatCurrency(income, country.currency) },
+          ]}
+        />
         <TaxYearBadge taxYear={country.taxYear} />
         <h1 className="text-2xl font-semibold tracking-tight text-foreground">
           {formatCurrency(income, country.currency)} in {region.name}

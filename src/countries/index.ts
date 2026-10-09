@@ -1,7 +1,2 @@
-export {
-  listEnabledCountries,
-  getCountryBySlug,
-  getEnabledCountryBySlug,
-  getDefaultCountry,
-} from "./registry";
+export { listEnabledCountries, getCountryBySlug, getEnabledCountryBySlug } from "./registry";
 export type { CountryConfig } from "./types";
